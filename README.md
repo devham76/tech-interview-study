@@ -33,6 +33,12 @@
 ## 3. Operating System
 :arrow_forward: [답변 내용](/contents/os.md)
 
+- [OS란 무엇이며, 핵심 기능은?]
+- [부팅이 되는 과정을 설명하시오.]
+- [프로세스의 5가지 상태에 대해 설명하시오.]
+- [메모리 계층 구조를 설명하시오.]
+- [캐시와 버퍼의 차이점은?]
+
 ## 4. Database
 :arrow_forward: [답변 내용](/contents/db.md)
 
@@ -45,6 +51,12 @@
 
 ## 7. Java
 :arrow_forward: [답변 내용](/contents/java.md)
+
+* [자바 컴파일 과정을 설명하라]
+* [String, StringBuffer, StringBuilder의 차이점에 대해 설명하라]
+* [OOP의 4가지 특징]
+* [오버로딩과 오버라이딩의 차이]
+* [HashMap과 TreeMap의 차이]
 
 ## 8. Spring
 :arrow_forward: [답변 내용](/contents/spring.md)
