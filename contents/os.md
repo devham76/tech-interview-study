@@ -33,12 +33,12 @@ H/W와 S/W 사이에서 둘을 효율적으로 운영하고 관리하여
 
 > <https://flearning-blog.tistory.com/16>
 
-> :arrow_double_up:[Top](#3-os)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#3-ox)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+> :arrow_double_up:[Top](#3-os)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#3-os)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ### 부팅이 되는 과정
 > <https://neos518.tistory.com/113>
 
-> :arrow_double_up:[Top](#3-os)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#3-ox)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+> :arrow_double_up:[Top](#3-os)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#3-os)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ### 프로세스의 5가지 상태
 ![프로세스 상태](https://user-images.githubusercontent.com/55946791/80938240-559b8600-8e13-11ea-9176-a121491a0fb3.jpg)
@@ -50,7 +50,7 @@ H/W와 S/W 사이에서 둘을 효율적으로 운영하고 관리하여
 
 > <https://rebas.kr/852>
 
-> :arrow_double_up:[Top](#3-os)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#3-ox)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+> :arrow_double_up:[Top](#3-os)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#3-os)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ### 메모리 계층 구조
 ![메모리 계층](https://user-images.githubusercontent.com/55946791/80938438-128de280-8e14-11ea-8207-95cb98d94303.jpg)
@@ -70,8 +70,8 @@ H/W와 S/W 사이에서 둘을 효율적으로 운영하고 관리하여
 
 > <https://dakuo.tistory.com/126>
 
-> :arrow_double_up:[Top](#3-os)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#3-ox)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+> :arrow_double_up:[Top](#3-os)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#3-os)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ### 캐시와 버퍼의 차이점
 
-> :arrow_double_up:[Top](#3-os)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#3-ox)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+> :arrow_double_up:[Top](#3-os)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#3-os)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)

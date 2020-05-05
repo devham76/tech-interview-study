@@ -29,6 +29,13 @@
 
 ## 2. Network
 :arrow_forward: [답변 내용](/contents/network.md)
+* [tcp/udp의 차이점을 설명하라]
+* [흐름제어기법중 슬라이딩 윈도우 방식에대해 설명하라]
+* [브라우저에 네이버홈페이지 url을 입력했을때 일어나는 과정을 설명해라]
+* [OSI 7계층에대해 설명하여라]
+* [Restful API란?]
+
+
 
 ## 3. Operating System
 :arrow_forward: [답변 내용](/contents/os.md)
@@ -49,6 +56,11 @@
 ### :pushpin: [알고리즘 ps](https://github.com/devham76/AlgorithmPS)
 :arrow_forward: [답변 내용](/contents/algorithm.md)
 
+* [quick sort가 일어나는 과정을 설명해주세요]
+* [insertion sort가 일어나는 과정을 설명해주세요]
+* [DFS와 BFS의 차이를 말해주세요]
+* [이분 탐색 알고리즘에 대해 설명해주세요]
+* [알고있는 정렬 알고리즘과 그 중 좋아하는 정렬알고리즘 설명해주세요]
 ## 7. Java
 :arrow_forward: [답변 내용](/contents/java.md)
 
@@ -63,7 +75,11 @@
 
 ## 9. Software Engineering
 :arrow_forward: [답변 내용](/contents/software-engineering.md)
-
+* [sw공학이란? 필요한 이유? 좋은 설계란?]
+* [형상관리란?]
+* [Singleton, Adapter, Template패턴은 어떤 것인가? 왜 사용하는지? 코드 구현해보시오]
+* [코드 결합도와 응집도란?]
+* [블랙박스/화이트박스 테스트란?]
 ## 10. ETC
 :arrow_forward: [답변 내용](/contents/etc.md)
 
