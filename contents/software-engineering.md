@@ -31,7 +31,6 @@
 
 
 ### Singleton,Adapter,Template패턴은 어떤 것인가? 왜 사용하는지? 코드 구현해보시오
-Singleton,Adapter,Template패턴
 **Singleton 패턴**
 - 생성자가 여러 차례 호출되더라도 실제 생성되는 객체는 하나이고
 최고 생성 이후 호출된 생성자는 최초 생성자가 생성한 객체를 리턴한다
@@ -39,13 +38,24 @@ Singleton,Adapter,Template패턴
 **구현**
 - 생성자를 외부에서 호출할수 없게 private으로 선언한다
 - 인스턴스 생성을 내부에서 처리하여 외부에서는 그것을 가져다가 쓰기만 하도록한다
+> [참고](https://gmlwjd9405.github.io/2018/07/06/singleton-pattern.html)
 
 **Adapter 패턴**
+![adapter patteren](https://user-images.githubusercontent.com/55946791/81135809-8bb44380-8f94-11ea-9b96-8af9af1cdb66.png)
 
+- 한 클래스의 인터페이스를 사용하고자 하는 다른 인터페이스로 변환한다.
+- 어댑터를 이용하면 인터페이스 호환성 문제 때문에 같이 쓸 수 없는 클래스들을 연결해서 쓸수 있다.
+
+> [참고](https://niceman.tistory.com/141)
 
 **Template 패턴**
+- public final 메소드(HoustTemplate.buildHouse())에서 알고리즘의 골격을 정의한다.
+- 알고리즘의 여러 단계 중 일부는 서브 클래스(WoodenHouse.java, GlassHouse.java)에서 구현할 수 있다.
+- 템플릿 메소드를 이용하면 알고리즘의 구조는 그대로 유지하면서 서브클래스에서 특정 단계를 재정의 할 수 있다.
 
-> [참고](https://gmlwjd9405.github.io/2018/07/06/singleton-pattern.html)
+![template method 패턴](https://user-images.githubusercontent.com/55946791/81136309-2b260600-8f96-11ea-892a-41016e775907.JPG)
+
+> [참고](https://niceman.tistory.com/142?category=940951)
 
 > :arrow_double_up:[Top](#9-Software-Engineering)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
