@@ -11,6 +11,12 @@
 
 * [알고있는 정렬 알고리즘과 그 중 좋아하는 정렬알고리즘 설명해주세요](#알고있는-정렬-알고리즘과-좋아하는-정렬알고리즘)
 
+
+* 두개의 stack을 이용해 queue를 구현하라							
+* LinkedList의 원소를 역순으로 출력하는 방법은?							
+* tree와 graph를 설명하라							
+* 해싱의 충돌을 해결하는 방법들을 설명하라							
+* huffman encoding에 대해 설명하라	
 ---
 
 ### quick sort
@@ -171,3 +177,9 @@ public class InsertionSort {
   - 데이터에 분포에 따라 결과가 다르게 나오는, 불안정성이 있다.
   - unstable 정렬이다.
 > [참고](https://wordbe.tistory.com/entry/Sort-%EB%8C%80%ED%91%9C%EC%A0%81%EC%9D%B8-%EC%A0%95%EB%A0%AC%EC%9D%98-%EB%AA%A8%EB%93%A0-%EA%B2%83)
+
+* 두개의 stack을 이용해 queue를 구현하라							
+* LinkedList의 원소를 역순으로 출력하는 방법은?							
+* tree와 graph를 설명하라							
+* 해싱의 충돌을 해결하는 방법들을 설명하라							
+* huffman encoding에 대해 설명하라
