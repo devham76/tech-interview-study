@@ -6,6 +6,12 @@
 * [코드 결합도와 응집도란?](#코드-결합도와-응집도란?)
 * [블랙박스/화이트박스 테스트란?](#블랙박스/화이트박스-테스트란?)
 
+
+* [Agile 방법론이 무엇인지 설명해주세요]				
+* [소프트웨어 생명 주기 모델은 무엇이고 어떤 모델이 있는지 설명해주세요]
+* [CVS, SVN, GIT에 대해서 아는대로 설명해 보시오]
+* [형상 관리를 잘못하면 어떤 문제가 발생하나요?]
+* [객체지향과 절차지향 차이 설명해주세요]
 ---
 ### sw공학이란? 필요한 이유? 좋은 설계란?
 
@@ -83,4 +89,89 @@
 - sw내부 구조나 작동 원리를 모르는 상태에서 동작을 검사하는 방법
 
 > [참고](https://kkhipp.tistory.com/158)
+> :arrow_double_up:[Top](#9-Software-Engineering)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+### Agile 방법론이 무엇인지 설명해주세요
+**애자일 방법론**
+일정한 주기를 가지고 끊임없이 프로토 타입을 만들어 내며, 그때그때 필요한 요구를 더하고 수정하여 하나의 커라단 소프트웨어를 만들어 내는 소프트웨어 개발 방법론인 Agile 개발 방법론 채택
+<br>
+일정 주기를 가지고 계속 프로토 타입을 만들면서 요구사항을 필요할때마다 추가하고 수정하면서 큰 프로그램을 만들어 나아가는 겁니다.
+1~2주나 3~4주 단위로 쪼개서 개발합니다.
+이런게 많아지자 이를 지원하는 소프트웨어도 생겨났습니다.
+Jira같은 것이 있죠. 하지만 장점만 있는 건 아닙니다. 너무 개발자 중심이고, 수정이 가능하다에서 무한 수정이 될 수 있습니다.
+시너지가 있을 수도 있지만 그에 대한 부작용도 많을 수 있습니다.
+> [참고](http://blog.naver.com/PostView.nhn?blogId=potter777777&logNo=220784755910)
+
+**애자일 방법론의 장점**
+- 프로젝트 진행 중간 중간에 필요한 요소들을 바꿀 수 있습니다.
+- 시작할 때 프로젝트를 정확하게 규정하지 않아도 됩니다.
+- 작은 요소들을 출시 할 때 빠르게 만들 수 있습니다.
+- 점진적으로 테스트되기 때문에 초기에 버그를 발견할 수 있습니다.
+
+
+> [참고](https://flearning-blog.tistory.com/233)
+
+> :arrow_double_up:[Top](#9-Software-Engineering)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+### 소프트웨어 생명 주기 모델은 무엇이고 어떤 모델이 있는지 설명해주세요
+
+**생명 주기 모델**
+-소프트웨어를 어떻게 개발할 것인가에 대한 추상적 표현
+- 프로젝트 비용 산정과 개발 계획 수립의 기본 골격
+- 요구사항 분석(정의) -> 개발(설계, 구현, 테스트) -> 유지보수
+
+**모델 종류**
+1. 폭포수 모델
+	- 선형 순차적, 처음부터 사용자들이 요구사항 명확하게 제시해야한다
+	- 요구사항이 이해하기 쉽고, 시스템 개발 중 급격한 변경이 없는 경우 효과적
+
+2. 프로토 타입 모델
+	- 포르토타입 모델 제시
+3. 나선형 모델
+	- 폭포수 개선 + 프로토타입 모델의 반복성 + 위험분석
+	- 대규모 프로젝트에 적합
+	- 여러 차례 개발 과정 반복
+
+> [참고](https://storyofsol.tistory.com/124)
+
+> :arrow_double_up:[Top](#9-Software-Engineering)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+### CVS, SVN, GIT에 대해서 아는대로 설명해 보시오
+
+- CVS (Concurrent Version System)
+  - 90년에 출시된 무료 서버-클라이언트 형상관리 시스템.
+  - 파일 전체를 저장하는 것이 아니라 __변경사항만을 저장함__ 으로 용량을 적게 차지하지만
+  - 속도가 상대적으로 느리다.
+
+- SVN (Subversion)
+  - 형상관리/소스관리 툴의 일종.
+  - 중앙관리만을 지원.
+  - 다른 사용자의 커밋과 엉키지 않으며, 커밋 실패 시 롤백 기능을 지원.
+  - 안정성에 있어 CVS보다 상대적으로 좋지 않다.
+
+- Git
+  - 분산형 버전관리 시스템
+  - Repository의 완전한 복사본을 로컬에 저장할 수 있다.
+  - 처리속도가 빠르지만 대용량 코드 관리에 부적절하다.
+
+> [참고](https://velog.io/@rxjw95/SE)
+
+> :arrow_double_up:[Top](#9-Software-Engineering)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+### 형상 관리를 잘못하면 어떤 문제가 발생하나요?
+
+대규모 프로젝트는 수십, 수백명의 인원이 소프트웨어를 함께 개발하는데 그에 맞는 표준이 존재하지 않고 서로의 개발 사항을 확인하지 못한다면 프로젝트의 위험이나 혼란이 발생할 수 있음
+
+```
+대규모 프로젝트에서는 발생 가능한 위험이나 혼란을 줄이고 프로젝트를 체계적으로 관리하기 위해 형상관리가 반드시 필요
+```
+
+> [참고](https://velog.io/@rxjw95/SE)
+
+> :arrow_double_up:[Top](#9-Software-Engineering)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)			
+
+### 객체지향과 절차지향 차이 설명해주세요
+
+> [참고](https://gbsb.tistory.com/3)
+
 > :arrow_double_up:[Top](#9-Software-Engineering)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)

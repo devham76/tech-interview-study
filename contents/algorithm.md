@@ -12,11 +12,12 @@
 * [알고있는 정렬 알고리즘과 그 중 좋아하는 정렬알고리즘 설명해주세요](#알고있는-정렬-알고리즘과-좋아하는-정렬알고리즘)
 
 
-* 두개의 stack을 이용해 queue를 구현하라							
-* LinkedList의 원소를 역순으로 출력하는 방법은?							
-* tree와 graph를 설명하라							
-* 해싱의 충돌을 해결하는 방법들을 설명하라							
-* huffman encoding에 대해 설명하라	
+* [두개의 stack을 이용해 queue를 구현하라](#두개의-stack을-이용해-queue를-구현하라)						
+* [LinkedList의 원소를 역순으로 출력하는 방법은?](#LinkedList의-원소를-역순으로-출력하는-방법은?)
+* [tree와 graph를 설명하라](#tree와-graph를-설명하라)
+* [해싱의 충돌을 해결하는 방법들을 설명하라](#해싱의-충돌을-해결하는-방법들을-설명하라)
+* [huffman encoding에 대해 설명하라](#huffman-encoding에-대해-설명하라)
+
 ---
 
 ### quick sort
@@ -68,6 +69,7 @@ public static void quickSort(int arr[], int left, int right) {
 ```
 > [참고](https://creatordev.tistory.com/7)
 
+> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ### insertion sort
 - 모든 요소들을 차례로 이미 정렬된 배열 부분과 비교해서, 자신의 위치를 찾아 삽입하면서 정렬
@@ -79,44 +81,24 @@ public class InsertionSort {
 
 		int [] arr = {10, 2, 6, 4, 3, 7, 5};
 
-
-
 		for (int i = 1; i < arr.length; i++) {
-
 			int standard = arr[i];  // 기준
-
 			int aux = i - 1;   // 비교할 대상
 
-
-
 			while (aux >= 0 && standard < arr[aux]) {
-
 				arr[aux + 1] = arr[aux];   // 비교대상이 큰 경우 오른쪽으로 밀어냄
-
 				aux--;
-
 			}
-
 			arr[aux + 1] = standard;  // 기준값 저장
-
 		}
-
 		printArr(arr);
-
 	}
-
-
 
 	public static void printArr(int[] arr) {
-
 		for (int i = 0; i < arr.length; i++) {
-
 			System.out.print(arr[i] + " ");
-
 		}
-
 	}
-
 }
 
 ```
@@ -124,6 +106,7 @@ public class InsertionSort {
 > - [참고1](https://gmlwjd9405.github.io/2018/05/06/algorithm-insertion-sort.html)
 > - [참고2](https://marobiana.tistory.com/85)
 
+> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ### DFS와 BFS의 차이
 
@@ -131,8 +114,10 @@ public class InsertionSort {
 - 단순 검색속도는 BFS보다 느리다
 - 자기 자신을 호출하는 순환 알고리즘의 형태
 
-**BFA 너비우선탐색**
+**BFS : 너비우선탐색**
 - 큐나 인접리스트로 구현
+
+> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ### 이분 탐색 알고리즘
 
@@ -147,7 +132,10 @@ public class InsertionSort {
 
 - 시간 복잡도 : O(logN) , 중간값을 기준으로 계속 반으로 나누므로
 
+> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
 ### 알고있는 정렬 알고리즘과 좋아하는 정렬알고리즘
+
 ![정렬알고리즘](https://user-images.githubusercontent.com/55946791/81137452-d6848a00-8f99-11ea-90da-1b55ed10c83c.JPG)
 
 - 상황에 따라 다르다. 어떤 알고리즘이 최선이라고 할수 없다.
@@ -178,8 +166,124 @@ public class InsertionSort {
   - unstable 정렬이다.
 > [참고](https://wordbe.tistory.com/entry/Sort-%EB%8C%80%ED%91%9C%EC%A0%81%EC%9D%B8-%EC%A0%95%EB%A0%AC%EC%9D%98-%EB%AA%A8%EB%93%A0-%EA%B2%83)
 
-* 두개의 stack을 이용해 queue를 구현하라							
-* LinkedList의 원소를 역순으로 출력하는 방법은?							
-* tree와 graph를 설명하라							
-* 해싱의 충돌을 해결하는 방법들을 설명하라							
-* huffman encoding에 대해 설명하라
+> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+### 두개의 stack을 이용해 queue를 구현하라
+
+![stack 으로 queue](https://user-images.githubusercontent.com/55946791/81314079-a6d1a100-90c3-11ea-9a2d-f356150f14ee.jpg)
+
+```java
+public static void main(String[] args) {
+	Queue<Integer> q = new LinkedList<>();
+	Stack<Integer> s = new Stack();
+
+	Stack<Integer> s1 = new Stack();
+	Stack<Integer> s2 = new Stack();
+
+	for(int i=1; i<4; i++) {
+		q.add(i);
+		s.push(i);
+
+		s1.push(i);
+	}
+
+	System.out.println("큐 출력값");
+	while(!q.isEmpty()) {
+		System.out.println(q.poll());
+	}
+	System.out.println("스택 출력값");
+	while(!s.isEmpty()) {
+		System.out.println(s.pop());
+	}
+
+	//------------------------
+	while(!s1.isEmpty()) {
+		int num = s1.pop();
+		s2.push(num);
+	}
+	System.out.println("스택2 출력값");
+	while(!s2.isEmpty()) {
+		System.out.println(s2.pop());
+	}
+```
+
+> [참고](https://pro-programmer.tistory.com/entry/%EB%91%90%EA%B0%9C%EC%9D%98-%EC%8A%A4%ED%83%9DStack%EC%9C%BC%EB%A1%9C-%ED%81%90Queue-%EA%B5%AC%ED%98%84%ED%95%98%EA%B8%B0)
+
+> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+### LinkedList의 원소를 역순으로 출력하는 방법은?
+
+> [참고](https://hyerios.tistory.com/47)
+
+> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+### tree와 graph를 설명하라
+
+**트리와 그래프 차이**
+![graph-vs-tree](https://user-images.githubusercontent.com/55946791/81316131-27919c80-90c6-11ea-9c27-c4b22eb67e10.png)
+
+
+
+**트리**
+![tree-terms](https://user-images.githubusercontent.com/55946791/81315154-e51b9000-90c4-11ea-9110-fef627fcd7c8.png)
+
+- 노드로이루어진 자료 구조
+- 트리는 계층 모델 이다.
+- node와 edge로 구성
+- 트리에는 cycle이 존재x
+<br>
+- 트리의 구성
+```
+1. 하나의 루트 노드를 갖는다
+2. 루트 노드는 0개 이상의 자식 노드를 갖는다.
+3. 그 자식의 노드 또한 0개 이상의 자식을 갖고 이 구조가 반복된다.
+```
+<br>
+
+- 트리의 종류
+		- 이진 트리, 이진 탐색 트리, 균형 트리(AVL 트리, red-black 트리), 이진 힙(최대힙, 최소힙)
+- 트리의 탐색
+	- 중위 순회(in-order traversal): 왼쪽 가지 -> _현재 노드_ -> 오른쪽 가지
+	- 전위 순회(pre-order traversal): _현재 노드_ -> 왼쪽 가지 -> 오른쪽 가지
+	- 후위 순회(post-order traversal): 왼쪽 가지 -> 오른쪽 가지 -> _현재 노드_
+- 트리의 구현 : 배열과 연결리스트 모두 사용하여 구현이 가능
+
+> [참고](https://gmlwjd9405.github.io/2018/08/12/data-structure-tree.html)
+
+**그래프**
+- 노드와 그 노드를 연결하는 간선을 모아 놓은 자료구조
+- 연결되어 있는 객체 간의 __관계__ 를 표현할 수 있는 자료구조
+
+**그래프 특징**
+- 네트워크 모델
+- 루트 노드라는 개념x
+- 부모-자식 관계 개념x
+- 순환 혹은 비순환이다
+- 방향 그래프와 무방햔 그래프가 있다.
+
+**그래프 구현**
+- 인접리스트 , 인접행렬로 구현가능
+
+**그래프의 탐색**
+- 깊이 우선 탐색(DFS, Depth-First Search)
+루트 노드(혹은 다른 임의의 노드)에서 시작해서 다음 분기(branch)로 넘어가기 전에 해당 분기를 완벽하게 탐색하는 방법
+	- 즉, 넓게(wide) 탐색하기 전에 깊게(deep) 탐색하는 것이다.
+	- 사용하는 경우: 모든 노드를 방문 하고자 하는 경우에 이 방법을 선택한다.
+	- 깊이 우선 탐색이 너비 우선 탐색보다 좀 더 간단하다.
+- 너비 우선 탐색(BFS, Breadth-First Search)
+루트 노드(혹은 다른 임의의 노드)에서 시작해서 인접한 노드를 먼저 탐색하는 방법
+	- 즉, 깊게(deep) 탐색하기 전에 넓게(wide) 탐색하는 것이다.
+	- 사용하는 경우: 두 노드 사이의 최단 경로 혹은 임의의 경로를 찾고 싶을 때 이 방법을 선택한다.
+		- Ex) 지구상에 존재하는 모든 친구 관계를 그래프로 표현한 후 Ash와 Vanessa 사이에 존재하는 경로를 찾는 경우
+		- 깊이 우선 탐색의 경우 - 모든 친구 관계를 다 살펴봐야 할지도 모른다.
+		- 너비 우선 탐색의 경우 - Ash와 가까운 관계부터 탐색
+
+
+> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+### 해싱의 충돌을 해결하는 방법들을 설명하라
+
+> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+### huffman encoding에 대해 설명하라
+> :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)

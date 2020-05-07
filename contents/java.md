@@ -6,6 +6,11 @@
 * [오버로딩과 오버라이딩의 차이](#오버로딩과-오버라이딩의-차이)
 * [HashMap과 TreeMap의 차이](#HashMap과-TreeMap의-차이)
 
+* GC에 대해 설명하라							
+* 자바의 메모리구조는?							
+* 동등성(equals)과 동일성(==)에 대해 설명하라							
+* 제네릭과 와일드카드에 대해 설명하라							
+* 멀티스레딩환경에서 동기화문제를 해결하는 방법에대해 설명하라 (syncronized, atomic, volatile)
 
 ---
 
@@ -132,3 +137,11 @@ ex) 키보드라는 모양을 가졌지만, 문서를 작성하고 게임을 한
 > <https://genie247.tistory.com/11>
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-java)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+
+* GC에 대해 설명하라
+
+* 자바의 메모리구조는?				
+* 동등성(equals)과 동일성(==)에 대해 설명하라
+* 제네릭과 와일드카드에 대해 설명하라		
+* 멀티스레딩환경에서 동기화문제를 해결하는 방법에대해 설명하라 (syncronized, atomic, volatile)
