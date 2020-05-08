@@ -283,6 +283,45 @@ public static void main(String[] args) {
 
 ### 해싱의 충돌을 해결하는 방법들을 설명하라
 
+
+**체이닝**
+![체이닝](https://user-images.githubusercontent.com/55946791/81363693-eb3e5a80-911e-11ea-887d-b2a66844f30b.png)
+
+- 같은 주소로 해슁되는 원소를 모두 하나의 __연결 리스트__ 에 매달아 관리한다
+- 체이닝에서 삽입은 효율성을 위해 연결리스트의 _맨 앞에 삽입_ 한다.
+	- 맨 뒤에 삽입할 경우 삽입시마다 연결리스트를 따라 맨 끝으로 이동해야 하므로 낭비가 된다
+
+- 탐색과 삭제를 하려면 원하는 데이터를 찾기 위해 순차 탐색해야한다.
+
+**개방주소**
+- 체이닝과 같이 __추가 공간을 허용하지 않고__ 주어진 해쉬 테이블 공간 내에서 해결한다
+- 해쉬 함수를 계산해서 계산된 주소를 차지하고 있는 다른 원소가 없으면 그 자리에 넣고
+- 다른 원소가 있으면 __정해진 규칙__ 에 따라 다음 자리를 찾게 된다.
+- 정해진 규칙, 즉 다음 주소를 결정하는 방법은 3가지 이다. : __선형조사, 이차원 조사, 더블해슁__
+
+**개방주소 - 선형 조사**
+![개방주소 선형조사](https://user-images.githubusercontent.com/55946791/81364514-c5b25080-9120-11ea-8c50-9e27442cfbb2.png)
+- 가장 간단한 충돌 해결방법
+- 충돌이 일어나면 바로 뒷자리를 확인해서 비어있는 경우 저장한다.
+- 단점 : 특정 영역에 원소가 몰리면 성능이떨어진다. (검색시간, 삽입시간 저하) __1차군집화__
+
+
+**개방주소 - 이차원 조사**
+![개방주소 이차원 조사](https://user-images.githubusercontent.com/55946791/81364513-c519ba00-9120-11ea-8299-04cbb87d950e.png)
+- 이차원 조사는 바로 뒷자리를 보는 선형 조사와 달리 __보폭을 이차함수에 의해 넓혀가면서__ 본다.
+	- ex) i번째 해쉬 함수를 h(x)로 부터 i^2만큼 떨어진 자리로 삼을 수 있다.
+	- ex) h(x), h(x)+1, h(x)+4, h(x)+9, h(x)+16...
+- 장점 : 선형 조사에서처럼 특정 영역에 원소가 몰려도 그 영역을 빨리 벗어날수있다.
+- 단점 : __2차 군집화__ 문제발생
+
+**개방주소 - 더블 해싱**
+- 2개의 해시함수를 사용해서, 충돌 발생시 다른 해시함수로 해시값을 만들어 원소를 저장한다.
+- 장점 : 군집화 해결
+
+> [참고 - 더블해싱](https://m.blog.naver.com/beaqon/221300416700)
+
+> [참고 - 해시 충돌](https://itstory.tk/entry/%ED%95%B4%EC%8A%81%EC%97%90%EC%84%9C%EC%9D%98-%EC%B6%A9%EB%8F%99%ED%95%B4%EA%B2%B0Collision-Resolution)
+
 > :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ### huffman encoding에 대해 설명하라
