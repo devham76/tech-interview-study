@@ -90,3 +90,8 @@
 ![SQL JOIN](https://user-images.githubusercontent.com/55946791/81374887-3fefce80-913b-11ea-99cd-366bfb6d7c7d.png)
 
 ### NoSQL이란? 기존RDBMS와 다른점은?
+- 단순 검색 및 추가 작업에 있어서 매우 최적화된 키 값 저장 기법을 사용하여, 응답속도나, 처리 효율 등에 있어서 매우 뛰어난 성능을 나타냅니다.
+- 초고용량 데이터 처리 등 성능에 특화된 목적을 위해, 비관계형 데이터 저장소에, 비구조적인 데이터를 저장하기 위한 분산 저장 시스템
+- 종류 : MongoDB, HBASE, Cassandra등
+
+>[참고](https://shoark7.github.io/programming/knowledge/what-is-NoSQL)
