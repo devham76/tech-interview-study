@@ -14,11 +14,11 @@
 
 
 * java의 접근 제어자의 종류와 특징 설명해주세요
+* 멤버 변수 & 지역 변수
 * non-static 멤버와 static멤버의 차이 설명해주세요
 * final 키워드 (final/finally/finalize) 설명해주세요
 * 인터페이스와 추상 클래스의 차이(Interface vs Abstract Class) 설명해주세요
 * set, list, map의 차이와 각각의 인터페이스 구현체의 종류를 설명해주세요
->[참고](https://gmlwjd9405.github.io/2017/10/01/basic-concepts-of-development-java.html)
 
 ---
 
@@ -30,7 +30,7 @@
 3. .class파일은 Class Loader에 의해서 JVM내로 로드 된다.
 4. 실행엔진(인터프리터 또는 JIt)을 이용해서 byte code-> binary code로 변환한다.
 5. 변환된 binary code(기계어)는 메모리에(Runtime Data Area) 배치된다.
-6. Runtime 실행
+6. Runtime Data Area에 올라간 파일은 실행엔진(Execution Engine)에 의해 실행
 - 이와 같은 과정을 통해 Java파일이 컴파일되고, JVM에 의해 해당 OS에 맞게 변환시커 컴퓨터가 읽을 수 있도록 만들어준다.
 
 **실행 엔진 종류**
@@ -184,7 +184,7 @@ ex) 키보드라는 모양을 가졌지만, 문서를 작성하고 게임을 한
 ![jvm 메모리 구조](https://user-images.githubusercontent.com/55946791/81367024-0f059e80-9127-11ea-9159-2e7efe749983.png)
 
 **Method area(메소드 or 스테틱 영역)**
-- 멤버 변수이름, 데이터 타입, 접근제어자 같은 필드 정보
+- 멤버변수(static), 데이터 타입, 접근제어자 같은 필드 정보
 - 메소드 이름, 리턴 타입, 파라메터, 접근 제어자 같은 __메소드 정보__
 - type정보 (interface or class), Constant Pool(상수 풀: 문자 상수, 타입, 필드, 객체참조)
 - __static변수, final class변수__ 등이 생성
@@ -193,6 +193,7 @@ ex) 키보드라는 모양을 가졌지만, 문서를 작성하고 게임을 한
 **Heap area**
 - __new 키워드로 생성된 객체와 배열을__ 저장
 - 메소드 영역에 로드된 클래스만 생성가능하다
+- 데이터가 동적으로 생성, 소멸
 - 참조하는 변수나 필드가 없으면 의미 없는 객체가 되어 __GC의 대상이 된다__
 
 **Stack area**
@@ -385,3 +386,117 @@ public class Foo {
 >[참고](https://doll6777.github.io/android/2019/07/10/synchronized/)
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-java)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+
+### java의 접근 제어자의 종류와 특징 설명해주세요
+![접근 제어자](https://user-images.githubusercontent.com/55946791/81496271-7cfdc180-92f1-11ea-8c19-2e2f66c70b99.png)
+
+|접근제어자|설명|
+|--|--|
+|public| 프로젝트 안에서 자유롭게 사용가능하다 (제한이 전혀없다)|
+|protected| 같은 패키지 내에서 and 다른 패지키의 자손 클래스에서 접근 가능|
+|default| 같은 패키지 내에서만 접근 가능|
+|private| 같은 클래스 내에서만 접근 가능|
+
+![접근제어자2](https://user-images.githubusercontent.com/55946791/81496334-de259500-92f1-11ea-9803-6f65defddaf0.png)
+
+**Q. 접근 제어자의 조합 퀴즈**
+1. 메소드에 static 과 abstract 를 함께 사용 할 수 없다.  why ? static 메소드에는 몸통이 있는 메소드에서만 사용 할 수 있기 때문
+2. 클래스에 abstract 와 final 을 동시에 사용 할 수 없다.  why ? 클래스에 사용되는 final은 클래스를 확장 할 수 없다는 의미이고, abstract 는 상속 을 통해서 완성되어야 한다는 의미이므로 서로 모순되기 때문이다.
+3. abstract 메소드의 접근 제어자가 private 일 수는 없다.  why ? abstract 메소드는 자손클래스에서 구현하기 위해 접근해야 하기 때문이다.
+4. 메소드에 private 과 final 을 같이 사용 할 필요는 없다.  why ? 접근제어자가 private 인 메소드는 오버라이딩 될 수 없기 때문이다. 이 둘중 하나만 사용해도 의미가 충분하다.
+
+
+> [참고](https://csw7432.tistory.com/entry/Java-%EC%A0%91%EA%B7%BC%EC%A0%9C%EC%96%B4%EC%9E%90-Access-Modifier)
+
+
+### 멤버 변수 & 지역 변수
+
+**멤버 변수**
+- 클래스 블록 영역에 선언되는 변수
+
+**멤버 변수 - static O**
+- 클래스 변수, 공통변수, 정적변수, 전역변수
+- 컴파일시에 메모리할당,  프로그램 종료시 메모리 해제
+- 클래스 전체에서 사용 가능
+- 클래스의 모든 인스턴스가 같은 저장공간을 가리킨다
+- 저장공간 : Method 영역
+
+**멤버 변수 - static X**
+- 인스턴스 변수
+- 객체 생성시마다 따로 저장되는 변수
+- 저장공간 : Heap 영역
+- GC가 관리한다
+
+**지역 변수**
+- 메소드 블록 영역
+- 저장공간 : Stack 영역
+
+
+
+>[참고](https://m.blog.naver.com/PostView.nhn?blogId=turtle0720&logNo=60209489019&proxyReferer=https:%2F%2Fwww.google.com%2F)
+
+
+### non-static 멤버와 static멤버의 차이 설명해주세요
+- static은 메서드 or 변수에 붙을수있다.
+
+**static 멤버**
+- 공간적 특성 : __멤버는 클래스당 하나 생성__
+	- 객체 내부에 생성되는것 이아니고 컴파일시 method영역에 고정적으로 메모리 할당
+	- 클래스 멤버
+- 시간적 특성: __클래스 로딩 시에 멤버 생성__
+	- 컴파일시 생성, 프로그램 종료시 메모리 해제
+	- 객체 생성 하지 않고도 사용가능
+	- 객체가 사라져도 멤버는 사라지지않음
+- 공유의 특성 : __동일한 클래스의 모든 객체들에 의해 공유된다__
+
+**non-static 멤버**
+- 공간적 특성 : __멤버는 객체마다 별도로 존재__
+	- __인스턴스 멤버__ 라고 부른다
+	- heap 영역 (클래스 내부에서 선언시) or statck 영역(메소드 내에서 생성시) 에 생성
+- 시간적 특성 : __객체 생성시 멤버 생성__
+	- 객체 생서 후에 사용 가능
+	- 객체가 사라지면 메모리에서 해제
+- 공유의 특성 : __공유x__
+	- 멤버는 객체 내에서 각각의 공간을 유지
+
+> [참고](https://gmlwjd9405.github.io/2018/08/04/java-static.html)
+
+### final 키워드 (final/finally/finalize) 설명해주세요
+
+**final 키워드**
+- 변수나 메서드 또는 클래스가 __‘변경 불가능’__ 하도록 만든다.
+
+	- 원시(Primitive) 변수에 적용 시
+		- 해당 변수의 값 변경X
+		- final int number = 1;
+	- 참조(Reference) 변수에 적용 시
+		- 참조 변수가 힙(heap) 내의 다른 객체를 가리키도록 변경X
+	- 메서드에 적용 시
+		- 해당 메서드를 오버라이딩 X
+	- 클래스에 적용 시
+		- 해당 클래스를 __상속받을 수 X__
+
+**finally 키워드**
+- try/catch 블록이 종료될 때 항상 실행될 코드 블록을 정의하기 위해 사용
+	- finally는 선택적으로 try 혹은 catch 블록 뒤에 정의할 때 사용
+	- finally 블록은 예외가 발생하더라도 항상 실행
+		- 단, JVM이 try 블록 실행 중에 종료되는 경우는 제외
+	- finally 블록은 종종 뒷마무리 코드를 작성하는 데 사용
+ finally 블록은 try와 catch 블록 다음과, 통제권이 이전으로 다시 돌아가기 전 사이에 실행된다.
+
+**finalize() 메서드**
+쓰레기 수집기(GC, Garbage Collector)가 더 이상의 참조가 존재하지 않는 객체를 메모리에서 삭제하겠다고 결정하는 순간 호출된다.
+
+Object 클래스의 finalize() 메서드를 오버라이드해서 맞춤별 GC를 정의할 수 있다.
+```java
+protected void finalize() throws Throwable {
+/* 파일 닫기, 자원 반환 등등 */
+}
+```
+
+https://gmlwjd9405.github.io/2018/08/06/java-final.html
+
+* 인터페이스와 추상 클래스의 차이(Interface vs Abstract Class) 설명해주세요
+* set, list, map의 차이와 각각의 인터페이스 구현체의 종류를 설명해주세요
+>[참고](https://gmlwjd9405.github.io/2017/10/01/basic-concepts-of-development-java.html)
