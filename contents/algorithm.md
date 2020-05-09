@@ -212,6 +212,8 @@ public static void main(String[] args) {
 > :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ### LinkedList의 원소를 역순으로 출력하는 방법은?
+- 1. 스택으로 구현
+- 2. 다른 링크드리스트로 구현(null객체)
 
 > [참고](https://hyerios.tistory.com/47)
 
@@ -222,7 +224,8 @@ public static void main(String[] args) {
 **트리와 그래프 차이**
 ![graph-vs-tree](https://user-images.githubusercontent.com/55946791/81316131-27919c80-90c6-11ea-9c27-c4b22eb67e10.png)
 
-
+-
+트리와 그래프를 언제 사용할수있을까요?
 
 **트리**
 ![tree-terms](https://user-images.githubusercontent.com/55946791/81315154-e51b9000-90c4-11ea-9110-fef627fcd7c8.png)
@@ -293,7 +296,7 @@ public static void main(String[] args) {
 
 - 탐색과 삭제를 하려면 원하는 데이터를 찾기 위해 순차 탐색해야한다.
 
-**개방주소**
+**개방주소(open address)**
 - 체이닝과 같이 __추가 공간을 허용하지 않고__ 주어진 해쉬 테이블 공간 내에서 해결한다
 - 해쉬 함수를 계산해서 계산된 주소를 차지하고 있는 다른 원소가 없으면 그 자리에 넣고
 - 다른 원소가 있으면 __정해진 규칙__ 에 따라 다음 자리를 찾게 된다.
@@ -306,16 +309,19 @@ public static void main(String[] args) {
 - 단점 : 특정 영역에 원소가 몰리면 성능이떨어진다. (검색시간, 삽입시간 저하) __1차군집화__
 
 
-**개방주소 - 이차원 조사**
+**개방주소 - 제곱 탐색(Quadratic Probing)**
 ![개방주소 이차원 조사](https://user-images.githubusercontent.com/55946791/81364513-c519ba00-9120-11ea-8299-04cbb87d950e.png)
 - 이차원 조사는 바로 뒷자리를 보는 선형 조사와 달리 __보폭을 이차함수에 의해 넓혀가면서__ 본다.
 	- ex) i번째 해쉬 함수를 h(x)로 부터 i^2만큼 떨어진 자리로 삼을 수 있다.
 	- ex) h(x), h(x)+1, h(x)+4, h(x)+9, h(x)+16...
+- 해시충돌 시 제곱만큼 건너뛴 버켓에 데이터를 삽입(1,4,9,16..)
 - 장점 : 선형 조사에서처럼 특정 영역에 원소가 몰려도 그 영역을 빨리 벗어날수있다.
 - 단점 : __2차 군집화__ 문제발생
 
 **개방주소 - 더블 해싱**
 - 2개의 해시함수를 사용해서, 충돌 발생시 다른 해시함수로 해시값을 만들어 원소를 저장한다.
+- 해시충돌 시 다른 해시함수를 한 번 더 적용한 결과를 이용함.
+
 - 장점 : 군집화 해결
 
 > [참고 - 더블해싱](https://m.blog.naver.com/beaqon/221300416700)
@@ -325,4 +331,7 @@ public static void main(String[] args) {
 > :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ### huffman encoding에 대해 설명하라
+
+> [참고](http://www.judgeon.net/problem.php?id=3022)
+
 > :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
