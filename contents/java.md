@@ -12,6 +12,14 @@
 * [제네릭과 와일드카드](#제네릭과-와일드카드)
 * [멀티스레딩환경에서 동기화문제를 해결하는 방법에대해 설명하라 (syncronized, atomic, volatile)](#멀티스레딩환경에서-동기화문제를-해결하는-방법)
 
+
+* java의 접근 제어자의 종류와 특징 설명해주세요
+* non-static 멤버와 static멤버의 차이 설명해주세요
+* final 키워드 (final/finally/finalize) 설명해주세요
+* 인터페이스와 추상 클래스의 차이(Interface vs Abstract Class) 설명해주세요
+* set, list, map의 차이와 각각의 인터페이스 구현체의 종류를 설명해주세요
+>[참고](https://gmlwjd9405.github.io/2017/10/01/basic-concepts-of-development-java.html)
+
 ---
 
 ### 자바 컴파일 과정을 설명하라
