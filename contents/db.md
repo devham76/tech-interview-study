@@ -95,7 +95,7 @@
 - 관련 있는 컬럼을 기준으로 행을 합쳐주는 연산
 ![SQL JOIN](https://user-images.githubusercontent.com/55946791/81374887-3fefce80-913b-11ea-99cd-366bfb6d7c7d.png)
 
-<<<<<<< HEAD
+
 ### NoSQL이란? 기존 RDBMS와 다른점은?
 =======
 ### NoSQL이란? 기존RDBMS와 다른점은?
@@ -105,7 +105,7 @@
 - 종류 : MongoDB, HBASE, Cassandra등
 
 >[참고](https://shoark7.github.io/programming/knowledge/what-is-NoSQL)
-<<<<<<< HEAD
+
 
 - key value, 문서같은것들을 데이터로 다룰수있음
 - 와일드 컬럼db, 다큐먼트 db

@@ -133,11 +133,8 @@
 * 객체지향과 절차지향 차이 설명해주세요							
 ## 10. ETC
 :arrow_forward: [답변 내용](/contents/etc.md)
-<<<<<<< HEAD
-- sass lass pass
-=======
 
->>>>>>> c1aac125c16d30027a0d6360dacf5bf7baf5a190
+- sass lass pass
 ---
 
 # Reference

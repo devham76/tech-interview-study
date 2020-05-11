@@ -439,10 +439,8 @@ public class Foo {
 
 ### non-static 멤버와 static멤버의 차이 설명해주세요
 - static은 메서드 or 변수에 붙을수있다.
-<<<<<<< HEAD
+
 - static 사용의 이점
-=======
->>>>>>> c1aac125c16d30027a0d6360dacf5bf7baf5a190
 
 **static 멤버**
 - 공간적 특성 : __멤버는 클래스당 하나 생성__
@@ -490,11 +488,11 @@ public class Foo {
  finally 블록은 try와 catch 블록 다음과, 통제권이 이전으로 다시 돌아가기 전 사이에 실행된다.
 
 **finalize() 메서드**
-<<<<<<< HEAD
+
 __쓰레기 수집기(GC, Garbage Collector)가__ 더 이상의 참조가 존재하지 않는 __객체를 메모리에서 삭제하겠다고 결정하는 순간 호출__ 된다.
-=======
+
 쓰레기 수집기(GC, Garbage Collector)가 더 이상의 참조가 존재하지 않는 객체를 메모리에서 삭제하겠다고 결정하는 순간 호출된다.
->>>>>>> c1aac125c16d30027a0d6360dacf5bf7baf5a190
+
 
 Object 클래스의 finalize() 메서드를 오버라이드해서 맞춤별 GC를 정의할 수 있다.
 ```java
@@ -502,16 +500,16 @@ protected void finalize() throws Throwable {
 /* 파일 닫기, 자원 반환 등등 */
 }
 ```
-<<<<<<< HEAD
+
 
 - 개발자가 마음대로 오버라이딩 하면 안좋다.
 
 <br>
 - Q) final과 abstract는 동시에 사용가능하나요 ? -> 아니요. 불가능합니다.
-=======
+
 <br>
 - Q) final 과 abstract는 동시에 사용가능하나요 ? -> 아니요.불가능합니다.
->>>>>>> c1aac125c16d30027a0d6360dacf5bf7baf5a190
+
 
 >[참고](https://gmlwjd9405.github.io/2018/08/06/java-final.html)
 
@@ -588,7 +586,7 @@ protected void finalize() throws Throwable {
 
 
 >[참고](https://gmlwjd9405.github.io/2017/10/01/basic-concepts-of-development-java.html)
-<<<<<<< HEAD
+
 
 ### 오버플로우
 - 오버플로우
@@ -600,5 +598,3 @@ protected void finalize() throws Throwable {
 - 힙 오버플로우
 - 스택 오버플로우
  	- 스택에서 스택경계를 넘어설때
-=======
->>>>>>> c1aac125c16d30027a0d6360dacf5bf7baf5a190
