@@ -94,6 +94,14 @@
 * 크루스칼
 * Floyd-Warshall 알고리즘
 
+* 프라이어리티 큐의 구조 설명
+* heap에서 delete 과정을 그려라
+* 16진수 수를 10진수로 변경하는 코드를 작성해보세요
+* 이진트리, 이진 검색트리, 힙이 각각 무엇인지 설명해주세요
+* 해시테이블과 이진 검색트리를 비교하고 장단점을 이야기해주세요
+* 메모리가 제한된 모바일 기기용 주소록에 사용할 자료구조를 설계한다면 어느쪽을 쓰는것이 좋을까요?
+
+
 ## 7. Java
 :arrow_forward: [답변 내용](/contents/java.md)
 
@@ -117,6 +125,11 @@
 
 ## 8. Spring
 :arrow_forward: [답변 내용](/contents/spring.md)
+* IOC 란?
+* DI 란?
+* 흐름(웹브라우저에서 Spring MVC로 요청했을 떄)
+* Bean 객체란?
+* 스프링 디스패처 서블릿이란
 
 ## 9. Software Engineering
 :arrow_forward: [답변 내용](/contents/software-engineering.md)
@@ -134,7 +147,14 @@
 ## 10. ETC
 :arrow_forward: [답변 내용](/contents/etc.md)
 
-- sass lass pass
+* sass lass pass
+* Docker란 무엇인가요? 왜 사용하나요?
+* AWS를 사용해 본 경험이 있나요?
+* XML, json 차이
+
+## 11. 기술 외의 질문
+:arrow_forward: [답변 내용](/contents/experience.md)
+
 ---
 
 # Reference
