@@ -494,9 +494,81 @@ protected void finalize() throws Throwable {
 /* 파일 닫기, 자원 반환 등등 */
 }
 ```
+<br>
+- Q) final 과 abstract는 동시에 사용가능하나요 ? -> 아니요.불가능합니다.
 
-https://gmlwjd9405.github.io/2018/08/06/java-final.html
+>[참고](https://gmlwjd9405.github.io/2018/08/06/java-final.html)
 
-* 인터페이스와 추상 클래스의 차이(Interface vs Abstract Class) 설명해주세요
-* set, list, map의 차이와 각각의 인터페이스 구현체의 종류를 설명해주세요
+### 인터페이스와 추상 클래스의 차이(Interface vs Abstract Class) 설명해주세요
+
+**추상 메서드**
+- abstract 키워드 함께 원형만 선언되고, 코드는 작성되지 않는 메서드
+
+```java
+	public abstract String getName(); // 추상메서드
+	public abstract int getAge() {return 11; }; // 추상 메서드 x
+```
+
+**추상 클래스**
+- 개념 : abstract 키워드로 선언된 클래스
+	1. __추상 메서드를 최소 한 개 이상__ 가지고 abstract로 선언된 클래스
+		- 최소 한 개의 추상 메서드를 포함하는 경우 __반드시 추상 클래스로 선언__
+	2. 추상 __메서드가 없어도 abstract로__ 선언된 클래스
+		- 그러나 추상 메서드가 하나도 없는 경우라도 추상 클래스 선언 가능
+- 추상 클래스 구현
+	- 추상 클래스를 __일반 클래스에서 상속__ 받는다면 슈퍼 클래스의 __모든 추상 메서드를 구현해야한다.__
+	- 추상 클래스를 추상 클래스에서 상속 시 , 모든 추상 메서드 구현 안해도 된다.
+- 추상 클래스 목적
+	- 객체를 생성하기 위함X, 상속을 위한 부모 클래스로 활용하기 위한 것
+	- 여러 클래스들의 __공통된 부분을 추상화(추상 메서드)__ 하여 상속받는 클래스에게 구현을 강제화하기 위함 (메서드의 동작을 구현하는 자식 클래스로 책임을 위임)
+	- 즉, 추상 클래스의 추상 메서드를 자식 클래스가 구체화하여 __기능을 확장 하는데 목적__ 이 있다.
+
+
+**인터페이스**
+- 개념 : 추상 메서드와(public abstract) + 상수만을 포함 (public static final), interface 키워드 사용하여 선언
+- 인터페이스 구현
+	- 일반클래스 : 인터페이스를 상속하고, __추상 메서드 모두 구현__
+	- 추상클래스: 일부만 구현하면 abstract사용하여 추상클래스로 구현
+	- 인터페이스 : 인터페이스를 상속받아 새로운 인터페이스 구현
+	- implements 키워드 사용 하여 구현
+- 인터페이스의 목적
+	- __목적 : 구현 객체의 같은 동작을 보장__
+	- 즉, 서로 관련없는 클래스에게 공통적으로 사용하는 방식이 필요핮만 기능을 각각 구현할 필요가 있는 경우 사용
+
+
+|추상 클래스|인터페이스|
+|abstract| interface|
+|extends| implements|
+|목적:상속을 받아서 __기능을 확장__ 시킨다 | 목적:구현 객체의 __같은 동작을 보장__ 하기 위한 목적|
+|다중상속 x | 다중 구현 가능|
+|클래스o| 클래스 x|
+|abstract class Class| interface Interface|
+|일반 변수 가질수있다| 일반변수 x , static이 붙은 변수만 있다|
+| is a kind of | cand do this|
+|Appliances(Abstract Class) - TV, Refrigerator | Flyable(Interface) - Plane, Bird|
+
+> [참고1](https://gmlwjd9405.github.io/2017/10/01/basic-concepts-of-development-java.html)
+> [참고2](https://loustler.io/languages/oop_interface_and_abstract_class/)
+
+
+### set, list, map의 차이와 각각의 인터페이스 구현체의 종류를 설명해주세요
+![java-collections-framework](https://user-images.githubusercontent.com/55946791/81514002-7ca00d80-9367-11ea-8a58-df497bab5432.png)
+
+**Map**
+- 검색할 수 있는 인터페이스
+- 데이터를 삽입할 때 Key와 Value의 형태로 삽입되며, Key를 이용해서 Value를 얻을 수 있다.
+- Map: HashMap, LinkedHashMap, HashTable, TreeMap
+
+**Collection**
+- List
+	- 순서가 있는 Collection
+	- 데이터를 중복O
+	- Map: HashMap, LinkedHashMap, HashTable, TreeMap
+- Set
+	- 집합적인 개념의 Collection
+	- 순서의 의미가 없다.
+	- 데이터를 중복X
+	- Map: HashMap, LinkedHashMap, HashTable, TreeMap
+
+
 >[참고](https://gmlwjd9405.github.io/2017/10/01/basic-concepts-of-development-java.html)
