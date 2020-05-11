@@ -344,10 +344,13 @@ public static void main(String[] args) {
 
 ### 벨만포드 알고리즘과 다익스트라 알고리즘의 차이점?
 
+<<<<<<< HEAD
 다익스트라 - 우선순위큐
 벨만코드 - 구현어떻게하는지
 
 
+=======
+>>>>>>> c1aac125c16d30027a0d6360dacf5bf7baf5a190
 - 최단 경로 : 주어진 두 노드 사이의 경로들 중에서 __최소 비용인 경로__ 를 찾는 것
 
 **다익스트라**
@@ -383,8 +386,11 @@ public static void main(String[] args) {
 
 
 ### MST 알고리즘(Spanning Tree란?)
+<<<<<<< HEAD
 - 언제 사용하나요 ?
 	- 통신구축
+=======
+>>>>>>> c1aac125c16d30027a0d6360dacf5bf7baf5a190
 
 **Spanning Tree**
 - 그래프 내의 모든 정점을 포함하고 일부 간선을 선택해서 만든 트리
@@ -394,7 +400,10 @@ public static void main(String[] args) {
 **MST(Minimum Spanning Tree)**
 - 최소 신장 트리
 - 그래프에 있는 __모든 정점들을 가장 적은 수의 간선과 비용으로 연결__
+<<<<<<< HEAD
 - 정점 n개이면, 간선은 n-1개
+=======
+>>>>>>> c1aac125c16d30027a0d6360dacf5bf7baf5a190
 - MST는 최단거리가 아닐 수 있다. (최단 경로는 다익스트라)
 
 **MST 종류**
@@ -409,9 +418,12 @@ public static void main(String[] args) {
 - 정점에 연결 된 간선의 가중치 중 __가장 작은 가중치의 간선을 연결해__ 나가는 방식
 - __그래프에 간선이 많이 존재 하는 ‘밀집 그래프’의 경우 적합__
 
+<<<<<<< HEAD
 - 시간 복잡도 :
 
 - 구현코드 ?
+=======
+>>>>>>> c1aac125c16d30027a0d6360dacf5bf7baf5a190
 
 ### 크루스칼
 
@@ -423,6 +435,7 @@ public static void main(String[] args) {
 
 - kruskal : 그래프에 간선이 적게 존재 하는 __'희소 그래프'__ 의 경우 적합
 
+<<<<<<< HEAD
 - 시간복잡도 :
 
 - 구현 코드 ?
@@ -432,4 +445,10 @@ public static void main(String[] args) {
 - 거쳐가는 정점을 기준으로 최단 거리를 구한다
 	- 다익스트라 - 가장 적은 비용을 하나씩 선택
 
+=======
+### Floyd-Warshall 알고리즘
+- 모든 정점 에서 모든 정점으로 최단 경로
+- 거쳐가는 정점을 기준으로 최단 거리를 구한다
+	- 다익스트라 - 가장 적은 비용을 하나씩 선택
+>>>>>>> c1aac125c16d30027a0d6360dacf5bf7baf5a190
 - https://blog.naver.com/ndb796/221234427842

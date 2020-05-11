@@ -95,14 +95,21 @@
 - 관련 있는 컬럼을 기준으로 행을 합쳐주는 연산
 ![SQL JOIN](https://user-images.githubusercontent.com/55946791/81374887-3fefce80-913b-11ea-99cd-366bfb6d7c7d.png)
 
+<<<<<<< HEAD
 ### NoSQL이란? 기존 RDBMS와 다른점은?
+=======
+### NoSQL이란? 기존RDBMS와 다른점은?
+>>>>>>> c1aac125c16d30027a0d6360dacf5bf7baf5a190
 - 단순 검색 및 추가 작업에 있어서 매우 최적화된 키 값 저장 기법을 사용하여, 응답속도나, 처리 효율 등에 있어서 매우 뛰어난 성능을 나타냅니다.
 - 초고용량 데이터 처리 등 성능에 특화된 목적을 위해, 비관계형 데이터 저장소에, 비구조적인 데이터를 저장하기 위한 분산 저장 시스템
 - 종류 : MongoDB, HBASE, Cassandra등
 
 >[참고](https://shoark7.github.io/programming/knowledge/what-is-NoSQL)
+<<<<<<< HEAD
 
 - key value, 문서같은것들을 데이터로 다룰수있음
 - 와일드 컬럼db, 다큐먼트 db
 - 검색속도, 응답속도, 처리 효율에 좋다
 - 기존의 관계형데이터 베이스로는 처리하기 힘들다
+=======
+>>>>>>> c1aac125c16d30027a0d6360dacf5bf7baf5a190
