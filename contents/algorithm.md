@@ -18,6 +18,11 @@
 * [해싱의 충돌을 해결하는 방법들을 설명하라](#해싱의-충돌을-해결하는-방법들을-설명하라)
 * [huffman encoding에 대해 설명하라](#huffman-encoding에-대해-설명하라)
 
+* [벨만포드 알고리즘과 다익스트라 알고리즘의 차이점?](#벨만포드-알고리즘과-다익스트라-알고리즘의-차이점?)
+* [MST 알고리즘(Spanning Tree란?)](#MST-알고리즘(Spanning-Tree란?))
+* [프림](#프림)
+* [크루스칼](#크루스칼)
+* [Floyd-Warshall 알고리즘](#Floyd-Warshall-알고리즘)
 ---
 
 ### quick sort
@@ -335,3 +340,81 @@ public static void main(String[] args) {
 > [참고](http://www.judgeon.net/problem.php?id=3022)
 
 > :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+
+### 벨만포드 알고리즘과 다익스트라 알고리즘의 차이점?
+
+- 최단 경로 : 주어진 두 노드 사이의 경로들 중에서 __최소 비용인 경로__ 를 찾는 것
+
+**다익스트라**
+- 하나의 정점, 다른 모든 정점으로의 최단경로
+
+- 다익스트라 알고리즘은 다음과 같다. (P[A][B]는 A와 B 사이의 거리라고 가정한다)
+
+1. 출발점으로부터의 최단거리를 저장할 배열 d[v]를 만들고, 출발 노드에는 0을, 출발점을 제외한 다른 노드들에는 매우 큰 값 INF를 채워 넣는다. (정말 무한이 아닌, 무한으로 간주될 수 있는 값을 의미한다.) 보통은 최단거리 저장 배열의 이론상 최대값에 맞게 INF를 정한다. 실무에서는 보통 d의 원소 타입에 대한 최대값으로 설정하는 편. [5][6]
+2. 현재 노드를 나타내는 변수 A에 출발 노드의 번호를 저장한다.
+3. A로부터 갈 수 있는 임의의 노드 B에 대해, d[A] + P[A][B][7]와 d[B][8]의 값을 비교한다. INF와 비교할 경우 무조건 전자가 작다.
+4. 만약 d[A] + P[A][B]의 값이 더 작다면, 즉 더 짧은 경로라면, d[B]의 값을 이 값으로 갱신시킨다.
+5. A의 모든 이웃 노드 B에 대해 이 작업을 수행한다.
+6. A의 상태를 "방문 완료"로 바꾼다. 그러면 이제 더 이상 A는 사용하지 않는다.
+7. "미방문" 상태인 모든 노드들 중, 출발점으로부터의 거리가 제일 짧은 노드 하나를 골라서 그 노드를 A에 저장한다.
+8. 도착 노드가 "방문 완료" 상태가 되거나, 혹은 더 이상 미방문 상태의 노드를 선택할 수 없을 때까지, 3~7의 과정을 반복한다.
+
+- 이 작업을 마친 뒤, 도착 노드에 저장된 값이 바로 A로부터의 최단 거리이다. 만약 이 값이 INF라면, 중간에 길이 끊긴 것임을 의미한다.
+
+> [참고](https://namu.wiki/w/%EB%8B%A4%EC%9D%B5%EC%8A%A4%ED%8A%B8%EB%9D%BC%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98)
+> [코드 확인하기](https://devham76.github.io/datastructure/data_struture-Dijkstra/)
+
+**벨만 포드**
+- dp 관점
+- 다익스트라보다 느리다
+
+| 다익스트라| 벨만 포드|
+|--|--|
+|greedy 관점| dp관점|
+|벨만 포드 보다 빠르다 | 모든 수를 고려하기 때문에 다익스트라 보다 느리다|
+|그래프에 음의 가중치를 가진 간선x|그래프에 음의 가중치를 가진 간선o|
+
+>[참고](http://blog.naver.com/PostView.nhn?blogId=qbxlvnf11&logNo=221377612306&categoryNo=21&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView)
+
+
+### MST 알고리즘(Spanning Tree란?)
+
+**Spanning Tree**
+- 그래프 내의 모든 정점을 포함하고 일부 간선을 선택해서 만든 트리
+- 사이클 포함 x
+- 하나의 크래프에서 많은 신장 트리 존재할수있다
+
+**MST(Minimum Spanning Tree)**
+- 최소 신장 트리
+- 그래프에 있는 __모든 정점들을 가장 적은 수의 간선과 비용으로 연결__
+- MST는 최단거리가 아닐 수 있다. (최단 경로는 다익스트라)
+
+**MST 종류**
+- Kruskal , Prim
+
+>[참고](https://devham76.github.io/algorithm/mst/)
+
+### 프림
+![prim mst](https://user-images.githubusercontent.com/55946791/81514716-9ba09e80-936b-11ea-90da-ba7578715bcc.png)
+
+- __시작 정점에서부터 출발__ 하여 신장 트리 집합을 단계적으로 확장해나가는 방법
+- 정점에 연결 된 간선의 가중치 중 __가장 작은 가중치의 간선을 연결해__ 나가는 방식
+- __그래프에 간선이 많이 존재 하는 ‘밀집 그래프’의 경우 적합__
+
+
+### 크루스칼
+
+![kruskal mst](https://user-images.githubusercontent.com/55946791/81514711-92afcd00-936b-11ea-8b39-23449e496f7e.png)
+
+1. 그래프의 간선들을 가중치의 오름차순으로 정렬 한다
+2. 정렬된 간선 리스트에서 순서대로 사이클을 형성하지 않는 간선을 선택한다.
+	- 즉, 가장 낮은 가중치를 먼저 선택
+
+- kruskal : 그래프에 간선이 적게 존재 하는 __'희소 그래프'__ 의 경우 적합
+
+### Floyd-Warshall 알고리즘
+- 모든 정점 에서 모든 정점으로 최단 경로
+- 거쳐가는 정점을 기준으로 최단 거리를 구한다
+	- 다익스트라 - 가장 적은 비용을 하나씩 선택
+- https://blog.naver.com/ndb796/221234427842
