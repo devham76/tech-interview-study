@@ -88,6 +88,8 @@
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ### OSI 7계층에대해 설명하여라
+![osi](https://user-images.githubusercontent.com/55946791/81579041-99c7f100-93e6-11ea-961f-0ba2d2962ad6.gif)
+
 - OSI 7 Layer 란 통신 접속에서 완료까지의 과정을 7단계로 정의한 국제 통신 표준 규약으로 다음과 같이 분류된다.
 - 물리계층 : 전송하는데 필요한 기능을 제공. 장비로는 통신 케이블, 허브가 존재한다.
 - 데이터링크계층 : 송/수신을 확인. MAC Address를 가지고 통신. 장비로는 브릿지와 스위치가 존재한다.
@@ -179,12 +181,13 @@ HTTP는 정보를 단순 텍스트로 주고 받기 때문에 (암호화X) N/W�
 
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### TCP/IP 프로토콜 스택 4계층으로 구분짓고 설명하라		
-- LINK 계층
+### TCP/IP 프로토콜 스택 4계층으로 구분짓고 설명하라
+- LINK 계층(네트워크 인터페이스 계층)
 	- 물리적인 영역의 표준화에 대한 결과. LAN,WAN,MAN과 같은 NW표준과 관련된 프로토콜을 정의하는 영역
   - 물리적 네트워크를 통한 실제 송수신 담당
+	- 데이터 링크 계층과 물리 계층
 
-- IP
+- IP(인터넷 계층)
 	- 경로검색을 해주는 계층
 	-  IP자체는 비연결지향적이며 신뢰할 수 없는 프로토콜
 	- 데이터를 전송할 때마다 거쳐야 할 경로를 선택해주지만 그 경로는 일정하지 않다
@@ -206,6 +209,7 @@ HTTP는 정보를 단순 텍스트로 주고 받기 때문에 (암호화X) N/W�
 
 - APPLICATION 계층
 	- 이러한 서버와 클라이언트의 프로그램 성격에 때라 데이터 송수신에 대한 규칙이 정해지는데 이를 가리켜 Application 프로토콜이라고 한다
+	- 어플리케이션 계층, 표현 계층, 세션 층
 
 ---
 

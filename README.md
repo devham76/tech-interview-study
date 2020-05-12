@@ -62,6 +62,8 @@
 * thrashing이란?
 * 프로세스간 통신하는 방법은?
 
+* Thread 가 3개 생성 되었을 때 t1, t2, t3의 순서가 보장 되는 코드를 짜 보세요.
+
 ## 4. Database
 :arrow_forward: [답변 내용](/contents/db.md)
 * Primary Key, Foreign Key, ER 모델이란?							
@@ -123,6 +125,8 @@
 * 인터페이스와 추상 클래스의 차이(Interface vs Abstract Class) 설명해주세요
 * set, list, map의 차이와 각각의 인터페이스 구현체의 종류를 설명해주세요
 
+* java8을 써보셨나요? java7에서 8로 올라오면서 어떤게 달라졌나요?
+
 ## 8. Spring
 :arrow_forward: [답변 내용](/contents/spring.md)
 * IOC 란?
@@ -130,6 +134,8 @@
 * 흐름(웹브라우저에서 Spring MVC로 요청했을 떄)
 * Bean 객체란?
 * 스프링 디스패처 서블릿이란
+* MVC1과 MVC2 패턴의 차이
+* Spring을 쓰는 이유
 
 ## 9. Software Engineering
 :arrow_forward: [답변 내용](/contents/software-engineering.md)
@@ -143,7 +149,8 @@
 * 소프트웨어 생명 주기 모델은 무엇이고 어떤 모델이 있는지 설명해주세요							
 * CVS, SVN, GIT에 대해서 아는대로 설명해 보시오.							
 * 형상 관리를 잘못하면 어떤 문제가 발생하나요?							
-* 객체지향과 절차지향 차이 설명해주세요							
+* 객체지향과 절차지향 차이 설명해주세요
+
 ## 10. ETC
 :arrow_forward: [답변 내용](/contents/etc.md)
 
@@ -151,6 +158,8 @@
 * Docker란 무엇인가요? 왜 사용하나요?
 * AWS를 사용해 본 경험이 있나요?
 * XML, json 차이
+* 최근 관심 있는 인터넷 세상의 이슈는 무엇인가요?
+* HTTP와 HTTP2의 차이
 
 ## 11. 기술 외의 질문
 :arrow_forward: [답변 내용](/contents/experience.md)

@@ -20,6 +20,9 @@
 * 인터페이스와 추상 클래스의 차이(Interface vs Abstract Class) 설명해주세요
 * set, list, map의 차이와 각각의 인터페이스 구현체의 종류를 설명해주세요
 
+* Comparable, Comparator 차이
+* java8을 써보셨나요? java7에서 8로 올라오면서 어떤게 달라졌나요?
+
 ---
 
 ### 자바 컴파일 과정을 설명하라
@@ -40,24 +43,34 @@
 한번 컴파일 하면 다음에는 빠르게 수행된다.
 
 
-> <https://kim6394.tistory.com/215>
-<https://aljjabaegi.tistory.com/387>
-<https://jeong-pro.tistory.com/148>
+> - <https://kim6394.tistory.com/215>
+> - <https://aljjabaegi.tistory.com/387>
+> - <https://jeong-pro.tistory.com/148>
+
+**JRE**
+ - 자바 클래스 라이브러리(Java class libraries) +
+ 자바 클래스 로더(Java class loader) +
+ 자바 가상 머신(Java Virtual Machine)
+>[참고](http://www.itworld.co.kr/news/110768)
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-java)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ### String,StringBuffer,StringBuilder
+
 **공통점**
 String을 저장하고 관리하는 클래스
+
 **차이점**
 immutable(불변) : String
 mutable(가변) : StringBuffer, StringBuilder
 
 **String**
 - 리터럴을 통해 생성되면, 그 인스턴스의 메모리 공간은 절대 변하지 않는다
+
 ```java
 String str = "literal" // 리터럴로 생성하는 방식
 ```
+
 - 문자열 변수에 변화를 주면, 메모리 공간 내의 값이 변하는 것이 아니라
 __String Pool이라는 공간안에 메모리를 할당 받아 새로운 String 클래스 객체를__ 만들어서
 문자열을 나타낸다.
@@ -74,11 +87,11 @@ __String Pool이라는 공간안에 메모리를 할당 받아 새로운 String 
 
 **StringBuffer**
 - 멀티 쓰레드 환경에서 동기화 O, 즉 thread-safe하다
+- 내부적으로 append 등 모든 메소드에 대해 synchronized 키워드가 붙어있다.
 
 **StringBuilder**
 - 동기화 X
 - 싱글 쓰레드 환경에서 StringBuffer에 비해 연산처리가 빠르다.
-
 
 
 > <https://jeong-pro.tistory.com/85>
@@ -175,8 +188,52 @@ ex) 키보드라는 모양을 가졌지만, 문서를 작성하고 게임을 한
 	- Young Generation 영역에서 저장되었던 객체 중에 오래된 객체가 이동되어 저장되는 영역이다. 이 영역에서 객체가 사라질 때 Major GC(Full GC)가 발생한다.
 
 
+> <https://d2.naver.com/helloworld/1329>
 > - [참고1](https://jeong-pro.tistory.com/148)
 > - [참고2](https://hoonmaro.tistory.com/19)
+
+<br>
+**GC**
+- C++에서 new나 delete를 통해 메모리를 명시적으로 해제했지만 Java에서는 개발자가 프로그램 코드로 메모리를 명시적으로 해제하지 않고 가비지 컬렉터(Garbage Collector)가 이 역할을 대신한다. 더 이상 사용하지 않는 객체를 찾아서 지우는 역할을 하는것이 GC 이다.
+<br><br>
+ Garbage Collection을 실행하면 JVM이 일시적으로 어플리케이션 실행을 멈추는데 이를 stop-the-world 라 한다.
+<br><br>
+ stop-the-world가 발생하면 GC를 실행하는 쓰레드를 제외한 나머지 쓰레드는 모두 작업을 멈춘다. GC 작업을 완료한 이후에야 중단했던 작업을 다시 시작한다. 어떤 GC 알고리즘을 사용하더라도 stop-the-world는 발생한다. 대개의 경우 GC 튜닝이란 이 stop-the-world 시간을 줄이는 것이다.
+<br><br>
+ GC는 아래의 두가지 가설을 토대로 만들어졌다.
+<br><br>
+대부분의 객체는 금방 접근 불가능 상태(unreachable)가 된다.
+오래된 객체에서 젊은 객체로의 참조는 아주 적게 존재한다.
+이러한 가설을 ‘weak generational hypothesis’라 한다. 이 가설의 장점을 최대한 살리기 위해서 HotSpot VM에서는 크게 2개로 물리적 공간을 나누었다. 둘로 나눈 공간이 Young 영역과 Old 영역이다.
+<br><br>
+영역별 데이터 흐름은 아래와 같다.
+
+![helloworld-1329-1](https://user-images.githubusercontent.com/55946791/81578490-d6471d00-93e5-11ea-9987-8b56a33d7817.png)
+
+<br><br>
+위의 Permanenet Generation 영역은 Method 영역에 포함된 부분이고.. Java 8부터 MetaSpace 영역으로 바뀌었다고 한다. 위 그림과 동일하게 적용되는지는 모르겠다. (PermGen 영역에서 일어나는 GC도 Major GC에 포함된다.)
+<br><br>
+
+**Young 영역**
+- 새롭게 생성된 데이터 대부분이 Young Generation에 위치하며 여기서 객체가 할당 해제되는 경우 __Minor GC가__ 발생했다고 한다.
+  - Eden 영역
+  - Survivor 영역(2개)
+- 으로 나뉘며, Eden에서 살아남은 객체는 Survivor 으로 보내고, Survivor영역이 가득 차면 다른 Survivor 영역으로 보낸다. 이 과정에서 살아남은 객체는 Old 영역으로 이동하게 된다.
+
+
+**Old 영역**
+접근 불가능 상태로 되지 않아 Young 영역에서 살아남은 객체가 여기로 복사된다. 대부분 Young 영역보다 크게 할당하며, 크기가 큰 만큼 Young 영역보다 GC는 적게 발생한다. 여기서 객체가 할당 해제되는 경우 __Major GC가__ 발생했다고 한다.
+<br><br>
+Old 영역은 기본적으로 데이터가 가득 차면 GC를 실행한다.
+<br><br>
+Major GC는 아래와 같은 방식에 따라 동작한다. GC 방식에 따라 처리가 달라진다.
+  - Serial GC
+  - Parallel GC
+  - Parallel Old GC(Parallel Compacting GC)
+  - Concurrent Mark & Sweep GC(이하 CMS) Java 9 부터 삭제.
+  - G1(Garbage First) GC
+
+>[참고](https://tramyu.github.io/etc/interview/)
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-java)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
@@ -184,11 +241,18 @@ ex) 키보드라는 모양을 가졌지만, 문서를 작성하고 게임을 한
 ![jvm 메모리 구조](https://user-images.githubusercontent.com/55946791/81367024-0f059e80-9127-11ea-9159-2e7efe749983.png)
 
 **Method area(메소드 or 스테틱 영역)**
+- __모든 스레드가 공유하는 영역으로 JVM이 시작될 때 생성, 프로그램 종료시 해제.__
+- __static변수, final class변수__ 등이 생성
+- JVM이 읽어 들인 각각의 클래스와 인터페이스에 대한 런타임 상수 풀, 필드와 메서드 정보, static 변수, 메서드의 바이트코드 등을 보관한다.
+- class의 구조 정보가 들어간다.
+
 - 멤버변수(static), 데이터 타입, 접근제어자 같은 필드 정보
 - 메소드 이름, 리턴 타입, 파라메터, 접근 제어자 같은 __메소드 정보__
 - type정보 (interface or class), Constant Pool(상수 풀: 문자 상수, 타입, 필드, 객체참조)
-- __static변수, final class변수__ 등이 생성
-- JVM 시작시 생성, 프로그램 종료시에 해제
+
+**Runtime Constant Pool**
+- 각 클래스와 인터페이스의 상수뿐만 아니라, 메서드와 필드에 대한 모든 레퍼런스까지 담고 있는 테이블이다.
+- 즉, 어떤 메서드나 필드를 참조할 때 JVM은 런타임 상수 풀을 통해 해당 메서드나 필드의 실제 메모리상 주소를 찾아서 참조한다.
 
 **Heap area**
 - __new 키워드로 생성된 객체와 배열을__ 저장
@@ -198,6 +262,8 @@ ex) 키보드라는 모양을 가졌지만, 문서를 작성하고 게임을 한
 
 **Stack area**
 - 지역변수, 파라메터, 리턴 값, 연산에 사용되는 임시 값이 생성되는 영역
+- Method정보, 메소드 호출 시 사용하는 지역변수 데이터 등을 저장한다. {}가 끝나는 동안 유지된다.
+
 - __기본(원시)타입 변수는 스택영역에 직접 값을 가진다__
 - ex) int a = 10;  스택영역에 이름이a인 공간 생성, 10입력
 - __참조타입 변수는 힙 영역이나 메소드 영역의 객체 주소를 가진다__
@@ -210,6 +276,7 @@ ex) 키보드라는 모양을 가졌지만, 문서를 작성하고 게임을 한
 - 쓰레드가 생성될때마다 생성되는 영역
 - 현재 쓰레드가 실행되는 부분의 __주소와 명령을 저장__ 하고 있다.
 - 이것을 이용해서 쓰레드를 돌아가면서 수행할 수 있다.
+- 스레드가 시작 될 때 생성, 현재 수행중인 JVM의 명령의 주소를 가진다.
 
 **Native Method Stack**
 - 자바 외 언어로 작성된 네이티브 코드를 위한 메모리 영역
@@ -598,3 +665,6 @@ protected void finalize() throws Throwable {
 - 힙 오버플로우
 - 스택 오버플로우
  	- 스택에서 스택경계를 넘어설때
+  - 하나 이상의 메소드가 순환 형식으로 상호 호출하면서 스택 내에 함수 호출 수가 끊임없이 증가할 때 발생한다.
+
+### Comparable, Comparator 차이
