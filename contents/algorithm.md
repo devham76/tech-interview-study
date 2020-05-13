@@ -24,16 +24,20 @@
 * [크루스칼](#크루스칼)
 * [Floyd-Warshall 알고리즘](#Floyd-Warshall-알고리즘)
 
-* 프라이어리티 큐의 구조 설명
-* heap에서 delete 과정을 그려라
-* 16진수 수를 10진수로 변경하는 코드를 작성해보세요
-* 이진트리, 이진 검색트리, 힙이 각각 무엇인지 설명해주세요
-* 해시테이블과 이진 검색트리를 비교하고 장단점을 이야기해주세요
-* 메모리가 제한된 모바일 기기용 주소록에 사용할 자료구조를 설계한다면 어느쪽을 쓰는것이 좋을까요?
-* LinkedList와 ArrayList의 차이
+
 ---
 
-### quick sort
+* [프라이어리티 큐의 구조 설명](#프라이어리티-큐의-구조-설명)
+* [heap에서 delete 과정을 그려라](#heap에서-delete-과정을-그려라)
+* [16진수 수를 10진수로 변경하는 코드를 작성해보세요](#16진수-수를-10진수로-변경하는-코드를-작성해보세요)
+* [이진트리, 이진 검색트리, 힙이 각각 무엇인지 설명해주세요](#이진트리,-이진-검색트리,-힙이-각각-무엇인지-설명해주세요)
+* [해시테이블과 이진 검색트리를 비교하고 장단점을 이야기해주세요](#해시테이블과-이진-검색트리를-비교하고-장단점을-이야기해주세요)
+* [메모리가 제한된 모바일 기기용 주소록에 사용할 자료구조를 설계한다면 어느쪽을 쓰는것이 좋을까요?](#메모리가-제한된-모바일-기기용-주소록에-사용할-자료구조를-설계한다면-어느쪽을-쓰는것이-좋을까요?)
+* [LinkedList와 ArrayList의 차이](#LinkedList와-ArrayList의-차이)
+---
+---
+
+## quick sort
 
 **정렬 과정**
 - (1)피벗을 기준으로 왼쪽에는 피벗보다 작은 수를, 오른쪽에는 피벗보다 큰 수를 놓는다.
@@ -84,7 +88,7 @@ public static void quickSort(int arr[], int left, int right) {
 
 > :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### insertion sort
+## insertion sort
 - 모든 요소들을 차례로 이미 정렬된 배열 부분과 비교해서, 자신의 위치를 찾아 삽입하면서 정렬
 
 ```java
@@ -121,7 +125,7 @@ public class InsertionSort {
 
 > :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### DFS와 BFS의 차이
+## DFS와 BFS의 차이
 
 **DFS : 깊이 우선 탐색**
 - 단순 검색속도는 BFS보다 느리다
@@ -132,7 +136,7 @@ public class InsertionSort {
 
 > :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### 이분 탐색 알고리즘
+## 이분 탐색 알고리즘
 
 - 과정
 
@@ -147,7 +151,7 @@ public class InsertionSort {
 
 > :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### 알고있는 정렬 알고리즘과 좋아하는 정렬알고리즘
+## 알고있는 정렬 알고리즘과 좋아하는 정렬알고리즘
 
 ![정렬알고리즘](https://user-images.githubusercontent.com/55946791/81137452-d6848a00-8f99-11ea-90da-1b55ed10c83c.JPG)
 
@@ -181,7 +185,7 @@ public class InsertionSort {
 
 > :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### 두개의 stack을 이용해 queue를 구현하라
+## 두개의 stack을 이용해 queue를 구현하라
 
 ![stack 으로 queue](https://user-images.githubusercontent.com/55946791/81314079-a6d1a100-90c3-11ea-9a2d-f356150f14ee.jpg)
 
@@ -224,7 +228,7 @@ public static void main(String[] args) {
 
 > :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### LinkedList의 원소를 역순으로 출력하는 방법은?
+## LinkedList의 원소를 역순으로 출력하는 방법은?
 - 1. 스택으로 구현
 - 2. 다른 링크드리스트로 구현(null객체)
 
@@ -232,7 +236,7 @@ public static void main(String[] args) {
 
 > :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### tree와 graph를 설명하라
+## tree와 graph를 설명하라
 
 **트리와 그래프 차이**
 ![graph-vs-tree](https://user-images.githubusercontent.com/55946791/81316131-27919c80-90c6-11ea-9c27-c4b22eb67e10.png)
@@ -297,7 +301,7 @@ public static void main(String[] args) {
 
 > :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### 해싱의 충돌을 해결하는 방법들을 설명하라
+## 해싱의 충돌을 해결하는 방법들을 설명하라
 
 
 **체이닝**
@@ -343,14 +347,14 @@ public static void main(String[] args) {
 
 > :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### huffman encoding에 대해 설명하라
+## huffman encoding에 대해 설명하라
 
 > [참고](http://www.judgeon.net/problem.php?id=3022)
 
 > :arrow_double_up:[Top](#6-algorithm)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 
-### 벨만포드 알고리즘과 다익스트라 알고리즘의 차이점?
+## 벨만포드 알고리즘과 다익스트라 알고리즘의 차이점?
 
 
 다익스트라 - 우선순위큐
@@ -390,7 +394,7 @@ public static void main(String[] args) {
 >[참고](http://blog.naver.com/PostView.nhn?blogId=qbxlvnf11&logNo=221377612306&categoryNo=21&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=postView)
 
 
-### MST 알고리즘(Spanning Tree란?)
+## MST 알고리즘(Spanning Tree란?)
 
 - 언제 사용하나요 ?
 	- 통신구축
@@ -414,7 +418,7 @@ public static void main(String[] args) {
 
 >[참고](https://devham76.github.io/algorithm/mst/)
 
-### 프림
+## 프림
 ![prim mst](https://user-images.githubusercontent.com/55946791/81514716-9ba09e80-936b-11ea-90da-ba7578715bcc.png)
 
 - __시작 정점에서부터 출발__ 하여 신장 트리 집합을 단계적으로 확장해나가는 방법
@@ -426,7 +430,7 @@ public static void main(String[] args) {
 
 - 구현코드 ?
 
-### 크루스칼
+## 크루스칼
 
 ![kruskal mst](https://user-images.githubusercontent.com/55946791/81514711-92afcd00-936b-11ea-8b39-23449e496f7e.png)
 
@@ -441,20 +445,162 @@ public static void main(String[] args) {
 
 - 구현 코드 ?
 
-### Floyd-Warshall 알고리즘
+## Floyd-Warshall 알고리즘
 - 모든 정점에서 모든 정점으로 최단 경로
 - 거쳐가는 정점을 기준으로 최단 거리를 구한다
 	- 다익스트라 - 가장 적은 비용을 하나씩 선택
 
 
-### Floyd-Warshall 알고리즘
+## Floyd-Warshall 알고리즘
 - 모든 정점 에서 모든 정점으로 최단 경로
 - 거쳐가는 정점을 기준으로 최단 거리를 구한다
 	- 다익스트라 - 가장 적은 비용을 하나씩 선택
 
 - https://blog.naver.com/ndb796/221234427842
 
-### LinkedList와 ArrayList의 차이
-ArrayList는 검색에 유리한 구조, 삽입 삭제가 자주 일어나면 LinkedList를 사용하는것이 낫다.
 
-ArrayList는 내부적으로 데이터를 배열에서 관리하며 데이터의 추가, 삭제를 위해 아래와 같이 임시 배열을 생성해 데이터를 복사 하는 방법을 사용 하고 있기 때문에 삽입 삭제시 많은 복사가 일어나기 때문.
+## 프라이어리티 큐의 구조 설명
+- 들어간 순서에 상관없이 우선순위가 높은 데이터가 먼저 나온다
+- 구현 방법
+	- 배열
+	- 연결리스트
+	- 힙
+<br>
+1. 배열
+- 데이터 삽입, 삭제 과정이 비효율적이다.
+- 삽입 위치를 찾기 위해 배열에 저장된 모든 데이터와 우선순위를 비교해야한다
+
+2. 연결리스트
+- 삽입 위치를 찾기 위해 배열에 저장된 모든 데이터와 우선순위를 비교해야한다
+
+3. 힙
+- 배열과 연결리스트의 단점 때문에 주로 힙으로 구현한다
+
+
+> :arrow_double_up:[Top](#6-algorithm)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## heap에서 delete 과정을 그려라
+- __삽입, 가장 마지막에 삽입 / 삭제, 루트 노드 삭제__
+
+
+**힙**
+- __완진이진트리 + 이진탐색트리의 형태__
+- 최대힙(부모노드>자식노드) / 최소힙(부모노드<자식노드)
+
+ **삭제**
+ - __루트만 삭제 가능 , 삭제후 마지막 노드를 루트로 두고 우선순위비교__
+
+ 1. 루트노드를 삭제
+ 2. 가장 마지막 원소를 루트 노드의 위치로 옮겨준다.
+ 3. 자식노드와 우선순위를 비교해서 자신의 자리를 찾는다.
+
+
+![힙 삭제](https://user-images.githubusercontent.com/55946791/81799451-525b7500-954c-11ea-93a0-fa92dab7657e.JPG)
+
+**삽입** 마지막 노드에 삽입
+![힙 삽입](https://user-images.githubusercontent.com/55946791/81799454-538ca200-954c-11ea-9190-7883f0f5f8cc.JPG)
+
+
+> [참고1](https://hannom.tistory.com/36)
+> [참고2](https://gmlwjd9405.github.io/2018/05/10/data-structure-heap.html)
+
+> :arrow_double_up:[Top](#6-algorithm)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## 16진수 수를 10진수로 변경하는 코드를 작성해보세요
+> :arrow_double_up:[Top](#6-algorithm)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## 이진트리, 이진 검색트리, 힙이 각각 무엇인지 설명해주세요
+
+**이진트리 (Binary Tree)**
+![이진트리](https://user-images.githubusercontent.com/55946791/81796516-7fa62400-9548-11ea-9647-f73733c9842e.JPG)
+- 노드의 최대 차수가 2인 트리
+
+<br>
+1. 편향 이진트리
+	- 한 쪽으로 편향
+
+![편향이진트리](https://user-images.githubusercontent.com/55946791/81798033-7f0e8d00-954a-11ea-86a5-d4ae54159be9.JPG)
+
+2. 포화 이진트리
+	- 이진트리에서 최대 노드의 수를 만족
+![포화이진트리](https://user-images.githubusercontent.com/55946791/81796651-b2e8b300-9548-11ea-8193-fcdc96d86453.JPG)
+
+3. 완전 이진트리 -> __힙__
+	- 위에서 아래로, 왼쪽에서 오른쪽으로 __순서대로 채워진 트리__
+
+![완전이진트리](https://user-images.githubusercontent.com/55946791/81799024-b16cba00-954b-11ea-9d41-34c1c6e12905.JPG)
+
+
+**이진트리 vs 이진탐색 트리**
+- 이진탐색 : 정렬된 숫자에서 검색시, 한 숫자 선택, 검색 숫자보다 작으면 오른쪽, 크면 왼쪽 검사
+- 이진트리 : 노드의 최대차수가 2인 트리
+- 이진탐색트리 : 이진트리 + 조건  
+	- __조건 : 루트노드 > 왼쪽 자식 노드 && 루트노드 < 오른쪽 자식 노드__
+	- 트리가 이진탐색을 한다
+	- __완전 이진트리가 아닐수있다__
+	- __탐색 방법__ : 전위, 중위, 후위 검색 방법이 있다
+
+### 문제점 : 삽입,삭제를 하다보면 편향이진트리가 될수도있다.
+- 삽입,삭제,검색 최악 : O(N) / 평균 : O(logN)
+
+**이진탐색 트리**
+- 이진탐색트리 검색
+![이진탐색트리 검색](https://user-images.githubusercontent.com/55946791/81798464-0b20b480-954b-11ea-9741-5e49fe464b29.png)
+
+- 이진탐색 삭제
+
+```
+지우려는 노드에
+1. 자식이 없을 때
+	- 부모와 연결해제
+2. 자식이 하나만 있을 때
+	- 자식과 그의 부모노드를 이어준다
+3. 자식이 두개 다 있을 때
+	- 왼쪽 자식 노드들 중에 가장 큰값 또는
+	오른쪽 자식 노드들 중에 가장 작은값으로 교체
+```
+
+> [참고](https://zeddios.tistory.com/492)
+
+- 자식 하나일떄
+![이진탐색트리 삭제-자식하나](https://user-images.githubusercontent.com/55946791/81800767-512b4780-954e-11ea-90dd-347264164e1d.JPG)
+
+- 자식 두개일떄
+![이진탐색트리 삭제](https://user-images.githubusercontent.com/55946791/81798461-09ef8780-954b-11ea-9c54-d05f897b91cb.png)
+
+> [참고](https://galid1.tistory.com/176?category=746456)
+
+> :arrow_double_up:[Top](#6-algorithm)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## 해시테이블과 이진 검색트리를 비교하고 장단점을 이야기해주세요. 그리고 메모리가 제한된 모바일 기기용 주소록에 사용할 자료구조를 설계한다면 어느쪽을 쓰는것이 좋을까요?
+
+|비교|해시테이블|이진검색트리|
+|--|--|--|
+|시간복잡도 평균|key,value 충돌 없을때 O(1)| O(logN)|
+|시간복잡도 최악 - 선형으로 검색|O(N)|O(N)|
+|정렬| x| o|
+
+- 해시테이블이 이진검색트리보다 빠르다
+- 하지만, 정렬이 되지않아 정렬을 위한 메모리를 추가로 필요하다
+- 따라서 이진검색트리가 해시테이블 보다는 느리지만 O(logN) 의 속도도 충분히 빠르기 때문에 메모리가 제한된 모바일 기기에서는 더 적절하다.
+
+> :arrow_double_up:[Top](#6-algorithm)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+
+## LinkedList와 ArrayList의 차이
+- ArrayList는 검색에 유리한 구조
+- 삽입 삭제가 자주 일어나면 LinkedList를 사용하는것이 좋다.
+
+- 이유 : ArrayList는 내부적으로 데이터를 배열에서 관리하며 데이터의 추가, 삭제를 위해 아래와 같이 __임시 배열을 생성해 데이터를 복사 하는 방법을__ 사용 하고 있기 때문에 삽입 삭제시 많은 복사가 일어나기 때문.
+
+> :arrow_double_up:[Top](#6-algorithm) :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm) :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)

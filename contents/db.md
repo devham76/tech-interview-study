@@ -5,8 +5,19 @@
 * [무결성에 대해 말해보시오](#무결성에-대해-말해보시오)					
 * [조인이 무엇인지?(inner, left, right, outer)](#조인이-무엇인지?)
 * [NoSQL이란? 기존RDBMS와 다른점은?](#NoSQL이란?-기존RDBMS와-다른점은?)
+
+<br>
+
+* [트랜잭션이란?(+트랜잭션의 성질)](#트랜잭션이란?(+트랜잭션의-성질))
+* [2단계 락킹이란?](#2단계-락킹이란?)
+* [공유락, 배타락이란?](#공유락,-배타락이란?)
+* [색인이란? 색인을 사용했을때 장단점?](#색인이란?-색인을-사용했을때-장단점?)
+* [역정규화를 하는 이유는 무엇인가?](#역정규화를-하는-이유는-무엇인가?)
+
+
+
 ---
-### Primary Key, Foreign Key, ER 모델
+## Primary Key, Foreign Key, ER 모델
 
 **Key 종류**
 <img width="398" alt="db 키종류" src="https://user-images.githubusercontent.com/55946791/81372469-66127000-9135-11ea-8eda-78d06205cfaa.png">
@@ -24,7 +35,7 @@
 
 > [참고](https://victorydntmd.tistory.com/126)
 
-### 정규화에 대해서 말해보시오, 정규화의 목적은?
+## 정규화에 대해서 말해보시오, 정규화의 목적은?
 
 **DB 정규화란 ?**
 - RDBMS의 설계에서 중복을 최소화하여 데이터를 구조화하는 프로세스
@@ -61,10 +72,10 @@
 
 > [참고] (https://yaboong.github.io/database/2018/03/09/database-normalization-1/)
 
-### 무결성에 대해 말해보시오
+## 무결성에 대해 말해보시오
 
-**무결성이란*
-- 데이터의 정확성과 일관성을 유지하고 보증하는 것
+**무결성이란**
+- 데이터의 __정확성과 일관성을 유지하고 보증하는__ 것
 
 **개체 무결성**
 - 기본키로 설정된 컬럼은 고유한 값을 가지며 NULL허용X
@@ -90,26 +101,86 @@
 
 > [참고](https://limkydev.tistory.com/161)
 
-### 조인이 무엇인지?
+## 조인이 무엇인지?
 - inner, left, right, outer
 - 관련 있는 컬럼을 기준으로 행을 합쳐주는 연산
 ![SQL JOIN](https://user-images.githubusercontent.com/55946791/81374887-3fefce80-913b-11ea-99cd-366bfb6d7c7d.png)
 
 
-### NoSQL이란? 기존 RDBMS와 다른점은?
-=======
-### NoSQL이란? 기존RDBMS와 다른점은?
->>>>>>> c1aac125c16d30027a0d6360dacf5bf7baf5a190
-- 단순 검색 및 추가 작업에 있어서 매우 최적화된 키 값 저장 기법을 사용하여, 응답속도나, 처리 효율 등에 있어서 매우 뛰어난 성능을 나타냅니다.
-- 초고용량 데이터 처리 등 성능에 특화된 목적을 위해, 비관계형 데이터 저장소에, 비구조적인 데이터를 저장하기 위한 분산 저장 시스템
+## NoSQL이란? 기존 RDBMS와 다른점은?
+- NoSQL = Not Only SQL or Non relational Database
+
+
+**RDBMS**
+- 데이터는 엄격한 스키마(데이터 개체, 속성, 관계,제약조건)에 따라 table에 저장된다
+- 관계를 통해 연결된 여러개의 테이블에 저장
+- 사용
+	- __데이터 자주 수정되는 애플리케이션 일때_
+	- __변경될 여지 없고, 명확한 스키마가 중요할경우__
+
+- __장점__
+	- 명확한 데이터 구조 보장 (정해진 스키마에 따라 데이터를 저장하기 때문에)
+	- __데이터 중복을 피해,__ 공간 절약 (각 데이터에 맞게 테이블을 나눠서 저장하기 때문)
+- __단점__
+	- 관계로 인한 시스템 복잡도를 고려하여 구조화 해야한다
+	- 시스템이 복잡하면, query문 복잡, 성능 저하
+	- 수평적 확장 어려움, 대부분 수직적 확장, 한계에 직면할 수 있다
+
+*NoSQL*
+- 분산처리 목적으로 나옴
+- 스키마X 관계X
+- 테이블과 같은 개념으로 컬렉션이라는 형태로 데이터를 관리
+- 사용
+	- 정확한 데이터 구조 알 수 없거나 변경,확장 가능한 경우
+	- __읽기가 많고, 변경이 적을때__
+	- __막대한 양의 데이터 다룰때__ (수평적 확장 용이)
+- __장점__
+	- 테이블간의 복잡한 관계를 생각 안해도 된다.
+	- 스키마가 없어서, 유연하다. 언제든지 저장데이터를 조정하고 새로운 필드 추가 가능
+	- __자주 변경도지 않는 데이터를 저장하기 유리하다__
+	- __수평적 확장에 용이__ ,(읽기, 쓰기가 빠르다)
+- __단점__
+	- __데이터 업데이트시, 중복될수__ 있어 저장 __데이터를 똑같이 관리__ 해줘야한다.(자유롭게 데이터 추가가능하여, 중복 저장될수있다)
 - 종류 : MongoDB, HBASE, Cassandra등
+>[참고](https://kimsangyeon.github.io/sql/nosql/database/2019/08/16/rdbms-nosql.html)
 
->[참고](https://shoark7.github.io/programming/knowledge/what-is-NoSQL)
 
 
-- key value, 문서같은것들을 데이터로 다룰수있음
-- 와일드 컬럼db, 다큐먼트 db
-- 검색속도, 응답속도, 처리 효율에 좋다
-- 기존의 관계형데이터 베이스로는 처리하기 힘들다
-=======
->>>>>>> c1aac125c16d30027a0d6360dacf5bf7baf5a190
+## 트랜잭션이란?(+트랜잭션의 성질)
+
+- 의미 : (한 단위를 이루는) __일련의 연관된 DB조작__
+- 데이터 __무결성__ 을 위해 가장 좋은 방법
+
+**1. 원자성**
+- 트랜잭션의 연산은 데이터베이스에 __모두 반영 or 전혀 반영되지 않아야 한다.__
+
+**2. 일관성**
+- 트랜잭션이 그 실행을 성공적으로 완료하면 언제나 일관성 있는 데이터베이스 상태로 변환한다.
+- 시스템이 가지고 있는 __고정요소는 트랜잭션 수행 전과 트랜잭션 수행 완료 후의 상태가 같아야 한다.__
+
+**3. 고립성**
+- 둘 이상의 트랜잭션이 동시에 병행 실행되는 경우 어느 하나의 트랜잭션 실행중에 다른 트랜잭션의 연산이 끼어들 수 없다.
+
+- 수행중인 트랜잭션은 완전히 완료될 때까지 다른 트랜잭션에서 수행 결과를 참조할 수 없다.
+
+**4. 영속성**
+- 성공적으로 완료된 트랜잭션의 결과는 시스템이 고장나더라도 영구적으로 반영되어야 한다.
+- 일단 커밋이 되면 트랜잭션에 의해 변경된 내용은 영구적이어야한다
+- DB시스템은 DB의 현재 상태가 유실되지 않도록 시스템 충돌 등의 문제로부터 복구할 수 있는 방법을 갖춰야 한다.
+
+> :arrow_double_up:[Top](#4-Database) :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#4-Database) :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## 2단계 락킹이란?
+
+> :arrow_double_up:[Top](#4-Database) :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#4-Database) :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## 공유락, 배타락이란?
+> :arrow_double_up:[Top](#4-Database) :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#4-Database) :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## 색인이란? 색인을 사용했을때 장단점?
+>[참고](https://lalwr.blogspot.com/2016/02/db-index.html)
+
+> :arrow_double_up:[Top](#4-Database) :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#4-Database) :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## 역정규화를 하는 이유는 무엇인가?
+> :arrow_double_up:[Top](#4-Database) :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#4-Database) :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)

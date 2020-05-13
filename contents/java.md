@@ -5,14 +5,14 @@
 * [OOP의 4가지 특징](#OOP의-4가지-특징)
 * [오버로딩과 오버라이딩의 차이](#오버로딩과-오버라이딩의-차이)
 * [HashMap과 TreeMap의 차이](#HashMap과-TreeMap의-차이)
-
+---
 * [GC에 대해 설명하라](#GC에-대해-설명하라)
 * [자바의 메모리구조](#자바의-메모리구조)
 * [동등성(equals)과 동일성(==)](#equals,==)
 * [제네릭과 와일드카드](#제네릭과-와일드카드)
 * [멀티스레딩환경에서 동기화문제를 해결하는 방법에대해 설명하라 (syncronized, atomic, volatile)](#멀티스레딩환경에서-동기화문제를-해결하는-방법)
 
-
+---
 * java의 접근 제어자의 종류와 특징 설명해주세요
 * 멤버 변수 & 지역 변수
 * non-static 멤버와 static멤버의 차이 설명해주세요
@@ -21,11 +21,18 @@
 * set, list, map의 차이와 각각의 인터페이스 구현체의 종류를 설명해주세요
 
 * Comparable, Comparator 차이
-* java8을 써보셨나요? java7에서 8로 올라오면서 어떤게 달라졌나요?
 
 ---
+* [java8을 써보셨나요? java7에서 8로 올라오면서 어떤게 달라졌나요?](#java8을-써보셨나요?-java7에서-8로-올라오면서-어떤게-달라졌나요?)
+* [this 키워드](#this-키워드)
+* [자바에서 tcp udp 소켓 생성 방법](#자바에서-tcp-udp-소켓-생성-방법)
+* [리틀엔디안 빅엔디안](#리틀엔디안-빅엔디안)
+* [Reflection](#Reflection)
+* [oop 5대 원칙](#oop-5대-원칙)
 
-### 자바 컴파일 과정을 설명하라
+---
+---
+## 자바 컴파일 과정을 설명하라
 ![jvm구조](https://user-images.githubusercontent.com/55946791/80935310-02bbd180-8e07-11ea-8723-b1f09125e26c.jpg)
 
 1. .java 파일을 build하면 Java Compiler의 javac라는 명령어를 사용해서 .class파일을 생성한다
@@ -55,7 +62,7 @@
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-java)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### String,StringBuffer,StringBuilder
+## String,StringBuffer,StringBuilder
 
 **공통점**
 String을 저장하고 관리하는 클래스
@@ -98,7 +105,7 @@ __String Pool이라는 공간안에 메모리를 할당 받아 새로운 String 
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-java)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### OOP의 4가지 특징
+## OOP의 4가지 특징
 캡상추다
 1. 캡슐화
 특정 객체가 독립적으로 역할을 수행하기 위해 필요한 데이터와 기능을 하나로 묶은것.(모듈화)
@@ -118,7 +125,7 @@ __String Pool이라는 공간안에 메모리를 할당 받아 새로운 String 
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-java)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### 오버로딩과 오버라이딩의 차이
+## 오버로딩과 오버라이딩의 차이
 **Overloading**
 - 개념
 하나의 클래스에서 같은 이름의 메소드를 여러 개 가질 수 있다.
@@ -138,7 +145,7 @@ ex) 키보드라는 모양을 가졌지만, 문서를 작성하고 게임을 한
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-java)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### HashMap과 TreeMap의 차이
+## HashMap과 TreeMap의 차이
 **Map**
 - key와 value를 가진 집합으로, 중복허용X
 
@@ -161,7 +168,7 @@ ex) 키보드라는 모양을 가졌지만, 문서를 작성하고 게임을 한
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-java)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 
-### GC에 대해 설명하라 ★★★★
+## GC에 대해 설명하라 ★★★★
 (조금더 깊게)
 
 - Heap 메모리 영역에 적재된 객체의 생존 여부를 판단하여 더 이상 사용되지 않는(참조 되지 않는) 객체를 해제하는 방식으로 메모리를 자동 관리한다.
@@ -237,7 +244,7 @@ Major GC는 아래와 같은 방식에 따라 동작한다. GC 방식에 따라 
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-java)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### 자바의 메모리구조
+## 자바의 메모리구조
 ![jvm 메모리 구조](https://user-images.githubusercontent.com/55946791/81367024-0f059e80-9127-11ea-9159-2e7efe749983.png)
 
 **Method area(메소드 or 스테틱 영역)**
@@ -290,7 +297,7 @@ Major GC는 아래와 같은 방식에 따라 동작한다. GC 방식에 따라 
 > [참고2](https://jeong-pro.tistory.com/148)
 
 
-### equals,==
+## equals,==
 
 - equals() 는 객채간의 __내용(값)을__ 비교할 수 있는 __'메소드'__ 입니다.
 
@@ -300,7 +307,7 @@ Major GC는 아래와 같은 방식에 따라 동작한다. GC 방식에 따라 
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-java)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### 제네릭과 와일드카드
+## 제네릭과 와일드카드
 
 **Generics(제네릭스)**
 - __다양한 타입의 객체들을 다루는 메서드나 컬렉션 클래스에 컴파일시에 타입체크를 해주는 기능__
@@ -364,7 +371,7 @@ Major GC는 아래와 같은 방식에 따라 동작한다. GC 방식에 따라 
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-java)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### 멀티스레딩환경에서 동기화문제를 해결하는 방법
+## 멀티스레딩환경에서 동기화문제를 해결하는 방법
 - synchronized, atomic, volatile
 
 **멀티스레딩**
@@ -455,7 +462,7 @@ public class Foo {
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-java)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 
-### java의 접근 제어자의 종류와 특징 설명해주세요
+## java의 접근 제어자의 종류와 특징 설명해주세요
 ![접근 제어자](https://user-images.githubusercontent.com/55946791/81496271-7cfdc180-92f1-11ea-8c19-2e2f66c70b99.png)
 
 |접근제어자|설명|
@@ -477,7 +484,7 @@ public class Foo {
 > [참고](https://csw7432.tistory.com/entry/Java-%EC%A0%91%EA%B7%BC%EC%A0%9C%EC%96%B4%EC%9E%90-Access-Modifier)
 
 
-### 멤버 변수 & 지역 변수
+## 멤버 변수 & 지역 변수
 
 **멤버 변수**
 - 클래스 블록 영역에 선언되는 변수
@@ -504,7 +511,7 @@ public class Foo {
 >[참고](https://m.blog.naver.com/PostView.nhn?blogId=turtle0720&logNo=60209489019&proxyReferer=https:%2F%2Fwww.google.com%2F)
 
 
-### non-static 멤버와 static멤버의 차이 설명해주세요
+## non-static 멤버와 static멤버의 차이 설명해주세요
 - static은 메서드 or 변수에 붙을수있다.
 
 - static 사용의 이점
@@ -531,7 +538,7 @@ public class Foo {
 
 > [참고](https://gmlwjd9405.github.io/2018/08/04/java-static.html)
 
-### final 키워드 (final/finally/finalize) 설명해주세요
+## final 키워드 (final/finally/finalize) 설명해주세요
 
 **final 키워드**
 - 변수나 메서드 또는 클래스가 __‘변경 불가능’__ 하도록 만든다.
@@ -580,7 +587,7 @@ protected void finalize() throws Throwable {
 
 >[참고](https://gmlwjd9405.github.io/2018/08/06/java-final.html)
 
-### 인터페이스와 추상 클래스의 차이(Interface vs Abstract Class) 설명해주세요
+## 인터페이스와 추상 클래스의 차이(Interface vs Abstract Class) 설명해주세요
 
 **추상 메서드**
 - abstract 키워드 함께 원형만 선언되고, 코드는 작성되지 않는 메서드
@@ -632,7 +639,7 @@ protected void finalize() throws Throwable {
 > [참고2](https://loustler.io/languages/oop_interface_and_abstract_class/)
 
 
-### set, list, map의 차이와 각각의 인터페이스 구현체의 종류를 설명해주세요
+## set, list, map의 차이와 각각의 인터페이스 구현체의 종류를 설명해주세요
 ![java-collections-framework](https://user-images.githubusercontent.com/55946791/81514002-7ca00d80-9367-11ea-8a58-df497bab5432.png)
 
 **Map**
@@ -655,7 +662,7 @@ protected void finalize() throws Throwable {
 >[참고](https://gmlwjd9405.github.io/2017/10/01/basic-concepts-of-development-java.html)
 
 
-### 오버플로우
+## 오버플로우
 - 오버플로우
 데이터마다 크기가 있는데 최대값이 넘어가면 발생, 음수로 넘어간다
 - 언더 플로우
@@ -667,4 +674,178 @@ protected void finalize() throws Throwable {
  	- 스택에서 스택경계를 넘어설때
   - 하나 이상의 메소드가 순환 형식으로 상호 호출하면서 스택 내에 함수 호출 수가 끊임없이 증가할 때 발생한다.
 
-### Comparable, Comparator 차이
+## Comparable, Comparator 차이
+
+
+## java8을 써보셨나요? java7에서 8로 올라오면서 어떤게 달라졌나요?
+- 네 사용해봤습니다. spring프로젝트 때 사용했습니다.
+
+
+**JAVA 7 부터 지원되는것들**
+1. Diamond Operator
+- 제네릭스에서 타입 추론가능
+
+```java
+  // Before Java 7
+  ArrayList<Integer> arr = new ArrayList<Integer>();
+
+  // In Java 7
+  ArrayList<Integer> arr = new ArrayList<>();
+```
+
+2. swith문에 string자료형 사용 가능
+3. 사용한 리소스를 .close()를 이용해서 수동으로 관리하던것을, try문에 선언하면 자동으로 관리가능
+
+```java
+// before java 7
+
+try{
+	fos = new FileOutputStream("movies.txt");
+} catch(IOException e){
+	e.printStackTrace();
+}finally{
+	try{
+		fos.colse();
+	} catch(IOException e){
+	}
+}
+
+// java 7
+
+try{
+	fos = new FileOutputStream("movies.txt");
+} catch(IOException e){
+	e.printStackTrace();
+}
+
+```
+
+**JAVA 8 부터 지원되는것들**
+
+1. Lambda Expressions
+
+```java
+Arrays.asList("a", "b", "c").forEach( e->{
+	System.out.println(e);
+});
+```
+
+2. Stream API
+- 배열이나 컬렉션 사용시 반복문이나 iterator를 사용했었다
+- 이렇게 되면 코드가 길어져서 가독성 저하, 이를 해결
+
+```java
+String[] arr = new String[]{"넷", "둘", "셋", "하나"};
+
+
+// 배열에서 스트림 생성
+Stream<String> stream1 = Arrays.stream(arr);
+stream1.forEach(e -> System.out.print(e + " "));
+```
+
+3. interface에  default method 생성 가능
+
+4. new Date and Time API
+- 이전에는 1월~12월을 0~11로 표현하는등 불편함이 있었다
+
+> :arrow_double_up:[Top](#7-Java)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-Java)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## this 키워드
+
+- this는 자기 자신을 의미하는 키워드
+- this.은 class내의 변수와 메소드의 매개변수가 동일할 때, class내의 멤버임을 명확하게 해준다
+- this()는 자신의 생성자를 호출할때 사용, 호출하는 곳의 첫번째 문장에 작성해야한다
+
+```java
+public class InstanceMemberEx03 {
+	String year;
+	String month;
+	String day;
+
+	public InstanceMemberEx03(String year) {
+		this(year, null, null);
+	}
+
+	public InstanceMemberEx03(String year, String month) {
+		this(year, month, null);
+	}
+
+	public InstanceMemberEx03(String year, String month, String day) {
+		this.year = year;
+		this.month = month;
+		this.day = day;
+	}
+}
+```
+
+
+> :arrow_double_up:[Top](#7-Java)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-Java)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## 자바에서 tcp udp 소켓 생성 방법
+
+
+> :arrow_double_up:[Top](#7-Java)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-Java)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## 리틀엔디안 빅엔디안
+
+- Little Endian
+	- 메모리의 첫 주소에 하위 데이터(데이터의 맨 오른쪽)부터 저장
+- Big Endian
+	- 메모리의 첫 주소에 상위 데이터(데이터의 맨 왼쪽)부터 저장
+
+>[참고](https://duzi077.tistory.com/201)
+> :arrow_double_up:[Top](#7-Java)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-Java)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+
+## Reflection
+- Reflection : 반사, 투영하다
+- 정의 : 객체를 통해 클래스의 정보를 분석해 내는 프로그램 기법
+
+> :arrow_double_up:[Top](#7-Java)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-Java)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## oop 5대 원칙
+
+- SOILD 원칙
+	- SRP(단일 책임 원칙) - 응집도는 높게, 결합도는 낮은 프로그램
+	- OCP(개방-폐쇄 원칙)
+	- LSP(리스코프 치환 원칙)
+	- DIP(의존 역전 원칙)
+	- ISP(인터페이스 분리 원칙)
+- 유지 보수와 확장을 위한 원칙
+
+1. SRP(단일 책임 원칙) - 응집도는 높게, 결합도는 낮은 프로그램
+2 .OCP(개방-폐쇄 원칙, Open-Closed)
+- 기존의 코드를 변경하지 않고(closed) 기능을 수정하거나 추가할수있도록(open) 설계
+- 설계할때 변경되는 것이 무엇인지에 초점을 맞춘다.
+- 이를 위해 interface가 자주 사용된다
+
+3. LSP(리스코프 치환 원칙)
+- 자식 클래스는 부모클래스에서 가능한 행위를 수행할수있어야한다.
+- 틀린 ex)
+	- class 도형 { 둘레(){}; 각(){};}
+	- class 사각형 extends 도형 { 둘레(); 각(){}; } (o)
+	- class 원 extends 도형 { 둘레(); 각(){}; } (x)
+
+4. DIP(의존 역전 원칙)
+- 의존 관계를 맺을때, 변하기 쉬운것보다 변하기 어려운것에 의존해야 한다.
+
+5. ISP(인터페이스 분리 원칙)
+- 클래스에서 자신이 사용하지 않는 인터페이스는 구현하지 않아야 한다
+- 따라서 하나의 인스턴스보다는 여러개의 구체적인 인터페이스를 설계하는 것이 좋다
+
+
+> [참고](https://dev-momo.tistory.com/entry/SOLID-%EC%9B%90%EC%B9%99)
+
+> :arrow_double_up:[Top](#7-Java)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-Java)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)

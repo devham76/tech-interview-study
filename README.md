@@ -41,6 +41,14 @@
 * TCP/IP 프로토콜 스택 4계층으로 구분짓고 설명하라							
 * Session과 Cookie 차이는?							
 
+* iocp
+* http keep alive / tcp keep alive
+* ssl
+* tcp udp 패킷구조 차이점
+* 리피터, 허브, 브릿지, 라우터와 L2, L3, L4, L7 스위치 차이점
+
+
+
 ## 3. Operating System
 :arrow_forward: [답변 내용](/contents/os.md)
 
@@ -71,6 +79,16 @@
 * 무결성에 대해 말해보시오							
 * 조인이 무엇인지?(inner, left, right, outer)							
 * NoSQL이란? 기존RDBMS와 다른점은?							
+
+<br>
+
+* 트랜잭션이란?(+트랜잭션의 성질)
+* 2단계 락킹이란?
+* 공유락, 배타락이란?
+* 색인이란? 색인을 사용했을때 장단점?
+* 역정규화를 하는 이유는 무엇인가?
+ 
+
 ## 5. Design Pattern
 :arrow_forward: [답변 내용](/contents/designpattern.md)
 
@@ -119,13 +137,22 @@
 * 제네릭과 와일드카드에 대해 설명하라							
 * 멀티스레딩환경에서 동기화문제를 해결하는 방법에대해 설명하라 (syncronized, atomic, volatile)							
 
+<br>
+
 * java의 접근 제어자의 종류와 특징 설명해주세요
 * non-static 멤버와 static멤버의 차이 설명해주세요
 * final 키워드 (final/finally/finalize) 설명해주세요
 * 인터페이스와 추상 클래스의 차이(Interface vs Abstract Class) 설명해주세요
 * set, list, map의 차이와 각각의 인터페이스 구현체의 종류를 설명해주세요
 
+<br>
+
 * java8을 써보셨나요? java7에서 8로 올라오면서 어떤게 달라졌나요?
+* this 키워드
+* 자바에서 tcp udp 소켓 생성 방법
+* 리틀엔디안 빅엔디안
+* Reflection
+* oop 5대 원칙
 
 ## 8. Spring
 :arrow_forward: [답변 내용](/contents/spring.md)
@@ -150,6 +177,17 @@
 * CVS, SVN, GIT에 대해서 아는대로 설명해 보시오.							
 * 형상 관리를 잘못하면 어떤 문제가 발생하나요?							
 * 객체지향과 절차지향 차이 설명해주세요
+
+<br>
+
+* MVP패턴, MVVM패턴이란?
+* TDD란?
+* Java에서 Builder 패턴을 사용하는이유는?
+* Observer 패턴은?
+* Java에서 팩토리 메서드 패턴을 사용하는 이유는?
+
+
+
 
 ## 10. ETC
 :arrow_forward: [답변 내용](/contents/etc.md)

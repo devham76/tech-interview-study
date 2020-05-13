@@ -11,8 +11,17 @@
 * [GET과 POST의 차이는?](#GET과-POST의-차이는?)
 * [TCP/IP 프로토콜 스택 4계층으로 구분짓고 설명하라](#TCP/IP-프로토콜-스택-4계층으로-구분짓고-설명하라)			
 * [Session과 Cookie 차이는?](#Session과-Cookie-차이는?)
+
 ---
-### tcp/udp의 차이점을 설명하라
+* [iocp](#iocp)
+* [http keep alive / tcp keep alive](#http-keep-alive-/-tcp-keep-alive)
+* [ssl](#ssl)
+* [tcp udp 패킷구조 차이점](#tcp-udp-패킷구조-차이점)
+* [리피터, 허브, 브릿지, 라우터와 L2, L3, L4, L7 스위치 차이점](#리피터,-허브,-브릿지,-라우터와-L2,-L3,-L4,-L7-스위치-차이점)
+
+---
+
+## tcp/udp의 차이점을 설명하라
 ![tcp udp](https://user-images.githubusercontent.com/55946791/81063602-1ce2d600-8f13-11ea-99e5-f089ca7ccc0c.jpg)
 **공통점**
 - 데이터 전달을 담당하는 전송계층의 프로토콜이다
@@ -47,7 +56,7 @@
 
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### 흐름제어기법중 슬라이딩 윈도우 방식에대해 설명하라
+## 흐름제어기법중 슬라이딩 윈도우 방식에대해 설명하라
 - TCP는 신뢰성을 유지하기 위해 흐름제어, 혼잡제어, 오류제어를 한다.
 
 **흐름 제어**
@@ -84,10 +93,10 @@
 
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### 브라우저에 네이버홈페이지 url을 입력했을때 일어나는 과정을 설명해라
+## 브라우저에 네이버홈페이지 url을 입력했을때 일어나는 과정을 설명해라
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### OSI 7계층에대해 설명하여라
+## OSI 7계층에대해 설명하여라
 ![osi](https://user-images.githubusercontent.com/55946791/81579041-99c7f100-93e6-11ea-961f-0ba2d2962ad6.gif)
 
 - OSI 7 Layer 란 통신 접속에서 완료까지의 과정을 7단계로 정의한 국제 통신 표준 규약으로 다음과 같이 분류된다.
@@ -100,7 +109,7 @@
 - 응용계층 : 사용자가 네트워크에 접근할 수 있도록 서비스를 제공한다.
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### Restful API란?
+## Restful API란?
 **REST의 구체적 개념**
 - __HTTP URI를 통해 자원을 명시하고, HTTP METHOD를 통해 자원에 대한 CRUD를 적용하는 것을 의미한다.__
 - 자원(URI) + 행위(HTTP Method) + 표현
@@ -123,7 +132,7 @@
 
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### 3-way handshaking이란?
+## 3-way handshaking이란?
 ![3-way handshaking2](https://user-images.githubusercontent.com/55946791/81298003-1db06f00-90af-11ea-8721-e3f2c14f6255.png)
 - client와 server 사이에 논리적인 접속을 성립하기 위해 사용한다.
 - TCP/IP프로토콜을 이용해서 통신하는 응용프로그램이 데이터를 전송하기 전에 먼저 정확한 전송을 보장하기 위해 상대방 컴퓨터와 사전에 세션을 수립하는 과정
@@ -138,7 +147,7 @@
 
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### HTTP와 HTTPS의 차이는?
+## HTTP와 HTTPS의 차이는?
 
 ![https](https://user-images.githubusercontent.com/55946791/81301250-c365dd00-90b3-11ea-90e5-95749b593209.png)
 
@@ -165,7 +174,7 @@ HTTP는 정보를 단순 텍스트로 주고 받기 때문에 (암호화X) N/W�
 
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### GET과 POST의 차이는?							
+## GET과 POST의 차이는?							
 
 **GET**
 - 주로 조회 할때 사용된다
@@ -181,7 +190,7 @@ HTTP는 정보를 단순 텍스트로 주고 받기 때문에 (암호화X) N/W�
 
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### TCP/IP 프로토콜 스택 4계층으로 구분짓고 설명하라
+## TCP/IP 프로토콜 스택 4계층으로 구분짓고 설명하라
 - LINK 계층(네트워크 인터페이스 계층)
 	- 물리적인 영역의 표준화에 대한 결과. LAN,WAN,MAN과 같은 NW표준과 관련된 프로토콜을 정의하는 영역
   - 물리적 네트워크를 통한 실제 송수신 담당
@@ -216,7 +225,7 @@ HTTP는 정보를 단순 텍스트로 주고 받기 때문에 (암호화X) N/W�
 
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### Session과 Cookie 차이는?
+## Session과 Cookie 차이는?
 
 **쿠키와 세션 사용하는 이유**
 - HTTP는 Connectionless(클라이언트가 요청후 응답 받으면 연결 해제), Stateles(통신이 끝나면 상태를 유지하지 않는 특징) 특성이 있다.
@@ -267,3 +276,33 @@ HTTP는 정보를 단순 텍스트로 주고 받기 때문에 (암호화X) N/W�
 
 > [참고](https://victorydntmd.tistory.com/34)
 > :arrow_double_up:[Top](#2-network)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+
+## iocp
+> :arrow_double_up:[Top](#2-network)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## http keep alive / tcp keep alive
+> :arrow_double_up:[Top](#2-network)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## ssl
+> :arrow_double_up:[Top](#2-network)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## tcp udp 패킷구조 차이점
+![TCP패킷](https://user-images.githubusercontent.com/55946791/81794325-94cd8380-9545-11ea-938a-ab551f055ace.png)
+![UDP (1)](https://user-images.githubusercontent.com/55946791/81794335-96974700-9545-11ea-8c04-13c1fb79bd37.png)
+
+
+> :arrow_double_up:[Top](#2-network)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## 리피터, 허브, 브릿지, 라우터와 L2, L3, L4, L7 스위치 차이점
+> :arrow_double_up:[Top](#2-network)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)

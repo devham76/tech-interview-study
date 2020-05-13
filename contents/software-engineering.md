@@ -7,14 +7,22 @@
 * [블랙박스/화이트박스 테스트란?](#블랙박스/화이트박스-테스트란?)
 
 
-<<<<<<< HEAD
 * [Agile 방법론이 무엇인지 설명해주세요](#Agile-방법론이-무엇인지-설명해주세요)			
 * [소프트웨어 생명 주기 모델은 무엇이고 어떤 모델이 있는지 설명해주세요](#소프트웨어-생명-주기-모델은-무엇이고-어떤-모델이-있는지-설명해주세요)
 * [CVS, SVN, GIT에 대해서 아는대로 설명해 보시오]
 * [형상 관리를 잘못하면 어떤 문제가 발생하나요?]
 * [객체지향과 절차지향 차이 설명해주세요]
+
+<br>
+
+* [MVP패턴, MVVM패턴이란?](#MVP패턴,-MVVM패턴이란?)
+* [TDD란?](#TDD란?)
+* [Java에서 Builder 패턴을 사용하는이유는?](#Java에서-Builder-패턴을-사용하는이유는?)
+* [Observer 패턴은?](#Observer-패턴은?)
+* [Java에서 팩토리 메서드 패턴을 사용하는 이유는?](#Java에서-팩토리-메서드-패턴을-사용하는-이유는?)
+
 ---
-### sw공학이란? 필요한 이유? 좋은 설계란?
+## sw공학이란? 필요한 이유? 좋은 설계란?
 
 **sw공학이란?**
 - sw의 설계, 개발, 유지보수 등에 대한 체계적인 이론과 기술
@@ -29,7 +37,7 @@
 
 > :arrow_double_up:[Top](#9-Software-Engineering)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### 형상관리란?
+## 형상관리란?
 - sw의 변경사항을 체계적으로 추적하고 통제하는 것
 - 프로젝트와 관련된 모든 변경사항을 관리한다
 - 형상 관리 도구 : CVS, SVN, Git 등이 있다
@@ -37,7 +45,7 @@
 > :arrow_double_up:[Top](#9-Software-Engineering)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 
-### Singleton,Adapter,Template패턴은 어떤 것인가? 왜 사용하는지? 코드 구현해보시오
+## Singleton,Adapter,Template패턴은 어떤 것인가? 왜 사용하는지? 코드 구현해보시오
 
 **Singleton 패턴**
 - 생성자가 여러 차례 호출되더라도 실제 생성되는 객체는 하나이고
@@ -70,7 +78,7 @@
 > :arrow_double_up:[Top](#9-Software-Engineering)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 
-### 코드 결합도와 응집도란?
+## 코드 결합도와 응집도란?
 **결합도**
 모듈간의 연결되어 상호 의존하는 정도
 결합도가 약할수록 좋은 설계
@@ -84,7 +92,7 @@
 > :arrow_double_up:[Top](#9-Software-Engineering)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 
-### 블랙박스/화이트박스 테스트란?
+## 블랙박스/화이트박스 테스트란?
 **화이트 박스 검사**
 - sw 내부 코드를 테스트 하는 기법
 - 개발자 관점의 내부 구조와 동작을 테스트 하는 방법
@@ -95,7 +103,7 @@
 > [참고](https://kkhipp.tistory.com/158)
 > :arrow_double_up:[Top](#9-Software-Engineering)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### Agile 방법론이 무엇인지 설명해주세요
+## Agile 방법론이 무엇인지 설명해주세요
 **애자일 방법론**
 일정한 주기를 가지고 끊임없이 프로토 타입을 만들어 내며, 그때그때 필요한 요구를 더하고 수정하여 하나의 커라단 소프트웨어를 만들어 내는 소프트웨어 개발 방법론인 Agile 개발 방법론 채택
 <br>
@@ -117,7 +125,7 @@ Jira같은 것이 있죠. 하지만 장점만 있는 건 아닙니다. 너무 �
 
 > :arrow_double_up:[Top](#9-Software-Engineering)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### 소프트웨어 생명 주기 모델은 무엇이고 어떤 모델이 있는지 설명해주세요
+## 소프트웨어 생명 주기 모델은 무엇이고 어떤 모델이 있는지 설명해주세요
 
 **생명 주기 모델**
 -소프트웨어를 어떻게 개발할 것인가에 대한 추상적 표현
@@ -141,7 +149,7 @@ Jira같은 것이 있죠. 하지만 장점만 있는 건 아닙니다. 너무 �
 
 > :arrow_double_up:[Top](#9-Software-Engineering)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### CVS, SVN, GIT에 대해서 아는대로 설명해 보시오
+## CVS, SVN, GIT에 대해서 아는대로 설명해 보시오
 
 - CVS (Concurrent Version System)
   - 90년에 출시된 무료 서버-클라이언트 형상관리 시스템.
@@ -163,7 +171,7 @@ Jira같은 것이 있죠. 하지만 장점만 있는 건 아닙니다. 너무 �
 
 > :arrow_double_up:[Top](#9-Software-Engineering)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-### 형상 관리를 잘못하면 어떤 문제가 발생하나요?
+## 형상 관리를 잘못하면 어떤 문제가 발생하나요?
 
 대규모 프로젝트는 수십, 수백명의 인원이 소프트웨어를 함께 개발하는데 그에 맞는 표준이 존재하지 않고 서로의 개발 사항을 확인하지 못한다면 프로젝트의 위험이나 혼란이 발생할 수 있음
 
@@ -175,7 +183,7 @@ Jira같은 것이 있죠. 하지만 장점만 있는 건 아닙니다. 너무 �
 
 > :arrow_double_up:[Top](#9-Software-Engineering)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)			
 
-### 객체지향과 절차지향 차이 설명해주세요
+## 객체지향과 절차지향 차이 설명해주세요
 <<<<<<< HEAD
 
 **절차지향 프로그래밍**
@@ -215,3 +223,29 @@ Jira같은 것이 있죠. 하지만 장점만 있는 건 아닙니다. 너무 �
 > [참고2](https://gbsb.tistory.com/3)
 
 > :arrow_double_up:[Top](#9-Software-Engineering)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+
+## MVP패턴, MVVM패턴이란?
+> :arrow_double_up:[Top](#9-Software-Engineering)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## TDD란?
+> :arrow_double_up:[Top](#9-Software-Engineering)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## Java에서 Builder 패턴을 사용하는이유는?
+> :arrow_double_up:[Top](#9-Software-Engineering)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## Observer 패턴은?
+> :arrow_double_up:[Top](#9-Software-Engineering)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## Java에서 팩토리 메서드 패턴을 사용하는 이유는?
+> :arrow_double_up:[Top](#9-Software-Engineering)
+:leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)
+:information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
