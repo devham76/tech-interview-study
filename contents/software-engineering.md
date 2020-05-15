@@ -226,11 +226,27 @@ Jira같은 것이 있죠. 하지만 장점만 있는 건 아닙니다. 너무 �
 
 
 ## MVP패턴, MVVM패턴이란?
+>[참고](https://beomy.tistory.com/43)
+
 > :arrow_double_up:[Top](#9-Software-Engineering)
 :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)
 :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ## TDD란?
+- Test Driven Development
+- 테스트 주도 개발 : __테스트가 개발을 이끌어 나간다__
+- 개념
+	- 테스트를 먼저 만들고 테스트를 통과하기 위한 코드를 작성하는 것.
+	- 레드 그린 사이클 (TDD사이클)
+1. RED 항상 실패하는 테스트를 먼저 작성하고
+2. GREEN 테스트가 통과하는 프로덕션 코드를 작성하고
+3. Refactor 테스트가 통과하면 프로턱션 코드를 리팩토링한다
+(리팩토링 : 작동하는것은 그대로 놓고, 내부구현(코드)만 변경한다)
+
+- TDD를 하는이유 : __테스트와 개발을 같이 진행하여 개발 초기의 오류를 발견하고, 수정하여__ 좋은 소프트웨어를 개발하기 위한 방법
+
+> [참고](https://devham76.github.io/testcode/Spring-testCode/)
+
 > :arrow_double_up:[Top](#9-Software-Engineering)
 :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#9-Software-Engineering)
 :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)

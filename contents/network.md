@@ -125,7 +125,7 @@
 - REST 기반으로 서비스 API를 구현하는것
 
 **RESTful**
-- REST원리를 따르는 시스템을 RESTfull 이라고 지칭한다.
+- REST원리를 따르는 시스템을 RESTful 이라고 지칭한다.
 
  > [참고](https://gmlwjd9405.github.io/2018/09/21/rest-and-restful.html)
 
@@ -253,7 +253,7 @@ HTTP는 정보를 단순 텍스트로 주고 받기 때문에 (암호화X) N/W�
 - 쇼핑몰 장바구니 기능
 
 **세션**
-- 사용자 정보 파일을 브라우저에 저장하는 쿠키와 달리 세션은 __서버 측__에서 관리
+- 사용자 정보 파일을 브라우저에 저장하는 쿠키와 달리 세션은 __서버 측__ 에서 관리
 - 서버에서 Client를 구분하기 위해 __세션 ID__ 를 부여
 - 웹 브라우저가 서버에 접속해서 브라우저 종료할때 까지인증상태 유지
 - __사용자 정보를 서버에 저장하기 때문에 쿠키보다 보안에 좋다__
@@ -284,11 +284,52 @@ HTTP는 정보를 단순 텍스트로 주고 받기 때문에 (암호화X) N/W�
 :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ## http keep alive / tcp keep alive
+
+**TCP keepalive**
+- 서버간에 ACK 패킷을 보내 세션 테이블이 지워지지 않고 계속 __세션 정보를 유지__
+- mq, kafka 등 TCP 기반의 서비스들을 대상으로 __지속적 연결을 유지해야 하는 경우__ 사용
+- 과정
+	1. A – B가 서로 Connection이 Establish된 상태에서 (3-handshake)
+	2. 지정된 시간(OS 설정 값 또는 어플리케이션 설정) 동안 서로 패킷 교환(Exchange)이 없을경우
+	3. payload가 없는 패킷을 보냅니다.
+	4. 패킷에 반응없으면 접속 close
+
+- 언제사용하지?
+	- 한쪽만 연결되어있는 상태를 정리하기 위해 사용
+
+```
+1. Checking for dead peers
+
+A – B가 연결된 경우 B시스템이 장애로 인해서 restart 될 경우
+A의 keep-alive 설정에 의해서 probe 패킷을 보내면
+B는 RST(Reset)을 응답 합니다.
+
+이럴 경우 B 시스템의 커넥션이 끊겼다는 것을 감지 할 수 있습니다.
+
+※ TCP 프로토콜 자체에서 장애 감지가 없기 때문에 Keepalive 옵션을
+통해서 감지
+```
+
+
+**HTTP Keepalive**
+- http 는 특성상 커넥션을 유지하지 않는다.
+- 따라서 KeepAlive를 사용해서 __커넥션을 유지해서 빠르게 데이터 주고받을__ 수 있다.
+- 일정시간이 지나면 __능동적으로 연결을 끊는다.__
+- 너무 많은 연결을 오래 유지하면, 다른 연결에 방해를 줄수있다.
+<br>
+- Apache, Nginx 등 웹 애플리케이션에서 __설정된 기간까지 최대한 연결을 유지하기 위해__ 사용된다.
+
+- HTTP 1.1부터 keepalive를 default로 제공한다
+
+
 > :arrow_double_up:[Top](#2-network)
 :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)
 :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ## ssl
+
+> <https://soul0.tistory.com/372>
+
 > :arrow_double_up:[Top](#2-network)
 :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)
 :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)

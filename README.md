@@ -47,7 +47,7 @@
 * tcp udp 패킷구조 차이점
 * 리피터, 허브, 브릿지, 라우터와 L2, L3, L4, L7 스위치 차이점
 
-
+* HTTP 자세히 설명해주세요
 
 ## 3. Operating System
 :arrow_forward: [답변 내용](/contents/os.md)
@@ -87,7 +87,7 @@
 * 공유락, 배타락이란?
 * 색인이란? 색인을 사용했을때 장단점?
 * 역정규화를 하는 이유는 무엇인가?
- 
+
 
 ## 5. Design Pattern
 :arrow_forward: [답변 내용](/contents/designpattern.md)
@@ -121,6 +121,8 @@
 * 해시테이블과 이진 검색트리를 비교하고 장단점을 이야기해주세요
 * 메모리가 제한된 모바일 기기용 주소록에 사용할 자료구조를 설계한다면 어느쪽을 쓰는것이 좋을까요?
 
+* 해쉬 테이블/큐/스택을 구현해주세요
+* 트리/링크드리스트 구현해주세요
 
 ## 7. Java
 :arrow_forward: [답변 내용](/contents/java.md)
@@ -156,13 +158,16 @@
 
 ## 8. Spring
 :arrow_forward: [답변 내용](/contents/spring.md)
+* Spring을 쓰는 이유
 * IOC 란?
 * DI 란?
 * 흐름(웹브라우저에서 Spring MVC로 요청했을 떄)
 * Bean 객체란?
+* Bean의 생성주기
 * 스프링 디스패처 서블릿이란
+* MVC패턴이 왜 나왔나요?
 * MVC1과 MVC2 패턴의 차이
-* Spring을 쓰는 이유
+
 
 ## 9. Software Engineering
 :arrow_forward: [답변 내용](/contents/software-engineering.md)
@@ -196,8 +201,9 @@
 * Docker란 무엇인가요? 왜 사용하나요?
 * AWS를 사용해 본 경험이 있나요?
 * XML, json 차이
-* 최근 관심 있는 인터넷 세상의 이슈는 무엇인가요?
+* 최근 관심 있는 인터넷 이슈는 무엇인가요?
 * HTTP와 HTTP2의 차이
+* apache와 nginx차이
 
 ## 11. 기술 외의 질문
 :arrow_forward: [답변 내용](/contents/experience.md)

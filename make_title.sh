@@ -65,18 +65,21 @@ echo ""
 ########################
 
 # 1. file.txt 파일에 있는 목록 읽기
-lists=()
+Lists=()
 i=0
 while read LINE; do
 	# 해당 줄이 공백이 아니면 계속 읽는다
 	if [ -z "$LINE" ];
 	then
-		solution $lists[@]
-		lists=()
+		echo "빈값"
+		solution $Lists[@]
+		Lists=()
 		i=0
 	else
         	# 공백 포함시, 따옴표 필수
-		lists[$i]="${LINE}"
+		Lists[$i]="$LINE"
+		echo "$Lists[0]"
+
         	i=$((i+1))
 	fi
 

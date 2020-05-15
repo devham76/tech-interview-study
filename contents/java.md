@@ -149,10 +149,14 @@ ex) 키보드라는 모양을 가졌지만, 문서를 작성하고 게임을 한
 **Map**
 - key와 value를 가진 집합으로, 중복허용X
 
-|기능 | HashMap| HashTable|
-|--|--|--|
-|key, value  null허용여부| O | X|
-| 여러 쓰레드 안전 여부 | X| O|
+|기능 | HashTable| HashMap| ConcurrentHashMap|
+|--|--|--|--|
+|key, value  null허용여부| X | O| X |
+| 여러 쓰레드 안전 여부 | O <br> (put,get과 같은 주요 메서드에 syncronized 키워드가 선언되어있다)| X | O|
+
+>[참고](https://jdm.kr/blog/197)
+
+
 
 | HashMap| TreeMap|
 |--|--|
