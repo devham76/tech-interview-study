@@ -160,8 +160,7 @@
 
 **3. 고립성**
 - 둘 이상의 트랜잭션이 동시에 병행 실행되는 경우 어느 하나의 트랜잭션 실행중에 다른 트랜잭션의 연산이 끼어들 수 없다.
-
-- 수행중인 트랜잭션은 완전히 완료될 때까지 다른 트랜잭션에서 수행 결과를 참조할 수 없다.
+- __수행중인 트랜잭션은 완전히 완료될 때까지 다른 트랜잭션에서 수행 결과를 참조할 수 없다.__
 
 **4. 영속성**
 - 성공적으로 완료된 트랜잭션의 결과는 시스템이 고장나더라도 영구적으로 반영되어야 한다.
@@ -178,6 +177,15 @@
 > :arrow_double_up:[Top](#4-Database) :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#4-Database) :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ## 색인이란? 색인을 사용했을때 장단점?
+- DB에서 검색시, 테이블의 모든 데이터를 검색하면 시간이 오래걸린다
+- 컬럼의 값 & 해당 레코드가 저장된 주소를 키&쌍 으로 index로 만들어 관리하는것
+
+- 특징
+	- 논리적/물리적으로 테이블과 독립적이다
+- 장점 : 검색시 빠르게 탐색
+- 단점 : 새로운 값 추가,삭제, 수정시 쿼리문 속도 느려진다
+
+
 >[참고](https://lalwr.blogspot.com/2016/02/db-index.html)
 
 > :arrow_double_up:[Top](#4-Database) :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#4-Database) :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)

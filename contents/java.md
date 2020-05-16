@@ -29,6 +29,7 @@
 * [리틀엔디안 빅엔디안](#리틀엔디안-빅엔디안)
 * [Reflection](#Reflection)
 * [oop 5대 원칙](#oop-5대-원칙)
+* [직렬화란?](#직렬화란?)
 
 ---
 ---
@@ -53,6 +54,9 @@
 > - <https://kim6394.tistory.com/215>
 > - <https://aljjabaegi.tistory.com/387>
 > - <https://jeong-pro.tistory.com/148>
+
+**jvm**
+JVM은 Java Byte Code를 OS에 맞게 해석해주는 역활
 
 **JRE**
  - 자바 클래스 라이브러리(Java class libraries) +
@@ -271,6 +275,21 @@ Major GC는 아래와 같은 방식에 따라 동작한다. GC 방식에 따라 
 - 데이터가 동적으로 생성, 소멸
 - 참조하는 변수나 필드가 없으면 의미 없는 객체가 되어 __GC의 대상이 된다__
 
+
+**Perm 영역**
+![java 78 heap](https://user-images.githubusercontent.com/55946791/82112736-bec3b780-978a-11ea-98e7-eafc2d9713a6.jpg)
+- JDK __8부터 Permanent Heap 영역이 제거되었다.__
+  - 대신 Metaspace 영역이 추가되었다.
+  - __Perm은 JVM에 의해 크기가 강제되던__ 영역이다.
+- __Metaspace는 Native memory 영역으로, OS가 자동으로 크기를 조절한다.__
+  - 옵션으로 Metaspace의 크기를 줄일 수도 있다.
+- 그 결과 기존과 비교해 __큰 메모리 영역을 사용할 수__ 있게 되었다.
+  - Perm 영역 크기로 인한 __java.lang.OutOfMemoryError를 더 보기 힘들어진다__
+-  저장 정보 : Class의 Meta 정보, Method의 Meta 정보, Static 변수와 상수 정보들이 저장 -> java8 ( Static Object는 Heap 영역으로 옮겨져서 GC의 대상)
+
+
+> <https://johngrib.github.io/wiki/java8-why-permgen-removed/>
+
 **Stack area**
 - 지역변수, 파라메터, 리턴 값, 연산에 사용되는 임시 값이 생성되는 영역
 - Method정보, 메소드 호출 시 사용하는 지역변수 데이터 등을 저장한다. {}가 끝나는 동안 유지된다.
@@ -314,13 +333,34 @@ Major GC는 아래와 같은 방식에 따라 동작한다. GC 방식에 따라 
 ## 제네릭과 와일드카드
 
 **Generics(제네릭스)**
+
+- __클래스를 선언할 때 타입을 결정하지X 객체를 생성할 때 유동적인 타입으로 재사용하기 위한 것__
+
+- 형변환을 할 필요없고, 타입 에러가 발생할 확률이 없어진다.
+
+- 타입추론은 메서드를 호출하는 코드에서 타입인자가 정의한대로 제대로 쓰였는지 살펴보는 컴파일러의 능력이다.
+
+
 - __다양한 타입의 객체들을 다루는 메서드나 컬렉션 클래스에 컴파일시에 타입체크를 해주는 기능__
-- 컴파일 후에 지네릭 타입이 제거 되고 원시 타입으로 지정된다. (.class파일에는 지네릭 타입에 대한 정보가 없다.)
+- __컴파일 후에__ 지네릭 타입이 제거 되고 __원시 타입으로 지정된다.__ (.class파일에는 지네릭 타입에 대한 정보가 없다.)
+
+
 
 **Generics 장점**
     - 타입의 안정성 제공 (의도하지 않은 타입의 객체가 저장되는 것을 막고, 저장된 객체를 꺼내올 때 원래의 타입과 다른 타입으로 잘못 형변환되어 발생하는 오류를 막는다.)
     - 타입체크와 형변환을 생략하여 코드가 간결해진다.
     - ex) ArrayList는 다양한 종류의 객체를 담는다. 보통 한 종류의 객체를 담는다. 꺼낼 때마다 타입체크를 하고 형변화 하는 것은 불편하다.
+
+
+
+
+**컬렉션(collection) 클래스에서 제네릭을 사용하는 이유를 설명하시오.**
+
+- 컬렉션 클래스에서 제네릭을 사용하면 컴파일러는 __특정 타입만 포함 될 수 있도록 컬렉션을 제한__ 합니다.
+  - ex) ArrayList<Integer> list : ArrayList에는 int 타입만 입력 가능하다
+
+- 컬렉션 클래스에 저장하는 인스턴스 타입을 제한하여 __런타임에 발생할 수 있는 잠재적인 모든 예외를 컴파일타임에__ 잡아낼 수 있도록 도와줍니다.
+
 
 **Generics 주의할 점**
   - __static멤버에 타입변수 T를 사용x__
@@ -658,9 +698,9 @@ protected void finalize() throws Throwable {
 	- Map: HashMap, LinkedHashMap, HashTable, TreeMap
 - Set
 	- 집합적인 개념의 Collection
-	- 순서의 의미가 없다.
+	- 순서 x
 	- 데이터를 중복X
-	- Map: HashMap, LinkedHashMap, HashTable, TreeMap
+	- set : HashSet, LinkedHashSet(순서o), TreeSet(이진 검색트리-레드 블랙트리로 구현)
 
 
 >[참고](https://gmlwjd9405.github.io/2017/10/01/basic-concepts-of-development-java.html)
@@ -679,7 +719,8 @@ protected void finalize() throws Throwable {
   - 하나 이상의 메소드가 순환 형식으로 상호 호출하면서 스택 내에 함수 호출 수가 끊임없이 증가할 때 발생한다.
 
 ## Comparable, Comparator 차이
-
+- Comparable : 기본적으로 정렬할때 사용. compareTo()를 오버라이딩
+- Comparator : 기본외에 다른 방법으로 정렬할때 사용. compare()오버라이딩
 
 ## java8을 써보셨나요? java7에서 8로 올라오면서 어떤게 달라졌나요?
 - 네 사용해봤습니다. spring프로젝트 때 사용했습니다.
@@ -756,6 +797,10 @@ stream1.forEach(e -> System.out.print(e + " "));
 :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-Java)
 :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
+5. Permanent Heap 영역이(메모리 크기 고정) 제거되었다
+- 대신 Native memory 영역에 Meataspace영역이 추가(OS가 자동 조정)
+- 따라서 OutOfMemoryError를 보기 힘들다
+
 ## this 키워드
 
 - this는 자기 자신을 의미하는 키워드
@@ -813,6 +858,10 @@ public class InstanceMemberEx03 {
 - Reflection : 반사, 투영하다
 - 정의 : 객체를 통해 클래스의 정보를 분석해 내는 프로그램 기법
 
+- 리플렉션은 __compiler를 무시한 채__ runtime 상황에서 __memory에 올라간 class,method등의 정의를 동적으로 찾아 조적할 수 있는 행위__
+- 즉, 동적인 언어가 가진 특징
+- 프레임워크에서 유연성있는 동작을 위해 자주 사용된다
+
 > :arrow_double_up:[Top](#7-Java)
 :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-Java)
 :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
@@ -828,7 +877,8 @@ public class InstanceMemberEx03 {
 - 유지 보수와 확장을 위한 원칙
 
 1. SRP(단일 책임 원칙) - 응집도는 높게, 결합도는 낮은 프로그램
-2 .OCP(개방-폐쇄 원칙, Open-Closed)
+
+2. OCP(개방-폐쇄 원칙, Open-Closed)
 - 기존의 코드를 변경하지 않고(closed) 기능을 수정하거나 추가할수있도록(open) 설계
 - 설계할때 변경되는 것이 무엇인지에 초점을 맞춘다.
 - 이를 위해 interface가 자주 사용된다
@@ -841,7 +891,7 @@ public class InstanceMemberEx03 {
 	- class 원 extends 도형 { 둘레(); 각(){}; } (x)
 
 4. DIP(의존 역전 원칙)
-- 의존 관계를 맺을때, 변하기 쉬운것보다 변하기 어려운것에 의존해야 한다.
+- 의존 관계를 맺을때, 변하기 쉬운것보다 __변하기 어려운것에 의존해야__ 한다.
 
 5. ISP(인터페이스 분리 원칙)
 - 클래스에서 자신이 사용하지 않는 인터페이스는 구현하지 않아야 한다
@@ -853,3 +903,9 @@ public class InstanceMemberEx03 {
 > :arrow_double_up:[Top](#7-Java)
 :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-Java)
 :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## 직렬화란?
+- 자바에서 입출력할때는 __스트림이라는 데이터 통로를__ 통해 이동한다
+- 하지만 객체는, 그렇지 않아서 스트림을 통해 저장 or N/W로 전송하는것 불가
+- 따라서 __객체를 스트림으로 입출력하기 위해 바이트 배열로 변환하는 것__
+- 역직렬화 : 스트림->객체

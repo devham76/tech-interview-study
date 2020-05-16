@@ -327,7 +327,16 @@ B는 RST(Reset)을 응답 합니다.
 :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ## ssl
-
+- HTTP의 보안 문제를 해결해준다. SSL이 적용되어 HTTPS라고 칭한다
+- http와 tcp사이에 있는 인증서. TLS가 정식명칭이나, SSL이라고 부른다
+- 동작
+	1. Server측에서 CA(인증기관)에 사이트정보+공개키를 주고 인증서를 요청한다
+	2. CA에서 심사완료 후 사이트정보+공개키를 개인키로 암호화 하고 공개키를 브라우저에 등록한다
+	3. 브라우저가 서버에 인증서를 요청한다
+	4. 인증서가 CA에서 인증받은것인지 브라우저가 확인하고 공개키를 이용해서 서버측 사이트정보+공개키를 획득한다
+	5. 클라이언트의 대칭키를 서버측의 공개키로 암호화 해서 서버에게 전송한다
+	6. 서버는 자신의 개인키로 복호화하여 클라이언트 측의 대칭키를 획득한다 -> 그러면, 대칭키는 클라이언트,서버만 갖게 된다
+	7. 이 대칭키로 암호화,복호화하여 통신한다
 > <https://soul0.tistory.com/372>
 
 > :arrow_double_up:[Top](#2-network)
@@ -344,6 +353,21 @@ B는 RST(Reset)을 응답 합니다.
 :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ## 리피터, 허브, 브릿지, 라우터와 L2, L3, L4, L7 스위치 차이점
+- 리피터
+	- 리피터 란? 근거리통신망(LAN)의 전송매체상에 흐르는 신호를 정형, 증폭, 중계하는 장치
+- 허브
+	- 다수의 pc와 장치들을 묶어서 LAN을 구성할때 한곳으로 모으는 역할, 플러딩 발생한다
+- 브릿지
+	-  데이터 링크 계층에 있는 여러 개의 네트워크 세그먼트를 연결해 준다
+	-  들어오는 데이터 패킷을 분석하여 브리지가 주어진 패킷을 다른 세그먼트의 네트워크로 전송할 수 있는지를 결정할 수 있다.
+- 라우터
+	- 어드레싱과 라우팅을 한다
+	- 어드레싱 : MAC주소를 알아낸다
+	- 라우팅 : 다음 목적지의 경로를 알아낸다
+- 스위치
+	-  OSI의 7 레이어 중 어떤 레이어에서 수행되는가에 따라 정의된 분류이다.
+	- <https://ngg3319.tistory.com/102>
+
 > :arrow_double_up:[Top](#2-network)
 :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#2-network)
 :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
