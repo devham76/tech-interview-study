@@ -121,3 +121,46 @@ while ((sourceLine = br.readLine()) != null) {
 	- 컴퓨터끼리 public network를 통해 __안전하게 통신하기 위해 사용하는 프로토콜__
 	- 데이터 전송, 원격 제어 시 사용한다
 	- private key, public key를 이용해 컴퓨터간 인증을한다 (서버와 클라이언트간 공개키,비밀키로 서로 인증 후, 대칭키 교환)
+
+
+## HTTP1, HTTP2
+
+**HTTP**
+	- 데이터 통신의 기초가 되는 응용프로그램 프로토콜
+	- client/server모델을 기반으로한다
+	- client가 server에게 요청하면 응답받는다
+
+	![HTTP1 2](https://user-images.githubusercontent.com/55946791/82141272-b8f3d200-986f-11ea-9d41-9ea70c1933d1.gif)
+
+	**HTTP1.1**
+	- 연결당 하나당 하나의 요청을 처리함
+	- 동신전송 불가능, 요청과 응답 순차적으로 이뤄진다
+	- 동시에 전송 문제와 다수의 리소스 처리하기에 속도와 성능이 좋지않다
+
+
+	__문제점__
+	- RTT(Round Trip Time)증가
+		- 하나의 연결에 하나의 요청을 처리한다
+		- 요청별로 connection을 만들게 되고 3-way handshake가 반복적으로 일어나서
+		- 불필요한 RTT증가와 네트워크 지연을 초래해서 성능을 저하시킨다.
+	- 무거운 Header구조 (특히 cookie)
+		- 헤더에 많은 메타 정보가 저장되어있다
+		- 매 요청시 마다 중복된 헤더값을 전송하게 되며
+		- domain에 설정된 cookie정보도 매 요청시 마다 헤더에 포함되어 전송되어 헤더값이 너무 무겁다
+	- 해결을 위한 노력
+		- image spriting : 웹 구성 이미지 파일 요청수를 줄이기 위해 아이콘을 하나의 큰 이미지로 만듬
+		- domain sharding : 다수의 connection 을 생성, 병렬로 요청 보내기도한다 / 하지만 도메인별 커넥션 개수 제한
+		- SPDY : HTTP를 통해 전송을 재 정의하는 형태
+		![spdy](https://user-images.githubusercontent.com/55946791/82141687-88616780-9872-11ea-87d7-8611e1799ce8.png)
+
+	**HTTP2**
+
+	- 멀티플렉싱 요청
+		![http2](https://user-images.githubusercontent.com/55946791/82141520-53a0e080-9871-11ea-86c3-ff63fec1f3ce.png)
+		- 동시에 여러개의 메세지를 동시에 주고 받을 수 있음
+		- 응답은 순서 x
+		- 단일 TCP 연결을 통해 여러 데이터 요청을 병렬로 보낼 수 있다. (웹 사이트를 빠르게 로드 할수있다)
+	- 요청 헤더 압축
+
+
+	> [https://ijbgo.tistory.com/26]
