@@ -155,8 +155,11 @@ ex) 키보드라는 모양을 가졌지만, 문서를 작성하고 게임을 한
 
 |기능 | HashTable| HashMap| ConcurrentHashMap|
 |--|--|--|--|
-|key, value  null허용여부| X | O| X |
-| 여러 쓰레드 안전 여부 | O <br> (put,get과 같은 주요 메서드에 syncronized 키워드가 선언되어있다)| X | O|
+|key, value  null허용여부| X | O | X |
+| 여러 쓰레드 안전 여부 | O <br> (put,get과 같은 주요 메서드에 syncronized 키워드가 선언되어있다)| X | O (map전체에 lock을걸지않는다 부분적으로 걸기 때문에 더 효율이 좋다)|
+
+**참고) vector vs arrayList**
+- vector는 무조건 동기화를 지원하기 때문에 멀티프로세싱이 아닌 프로그램에서 사용하면 효율이 떨어진다
 
 >[참고](https://jdm.kr/blog/197)
 
