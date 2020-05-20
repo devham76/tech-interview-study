@@ -145,7 +145,6 @@
 >[참고](https://kimsangyeon.github.io/sql/nosql/database/2019/08/16/rdbms-nosql.html)
 
 
-
 ## 트랜잭션이란?(+트랜잭션의 성질)
 
 - 의미 : (한 단위를 이루는) __일련의 연관된 DB조작__
@@ -170,10 +169,22 @@
 > :arrow_double_up:[Top](#4-Database) :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#4-Database) :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ## 2단계 락킹이란?
+- 데이터가 읽거나 쓰거나 락을 해야하는데
+- 동시에 락을 걸수있기때문에 , 단계를 나눠서 생각해야한다
+- 확장단계 - 락을 걸수있고
+- 수축단계 - 언락
+- 공유락, 배타락을 따로 두고 임의로 병행접근못하게한다
+- 데드락 발생가능, 확장단계에서 수축단계를 기다릴수있기때문
 
 > :arrow_double_up:[Top](#4-Database) :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#4-Database) :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ## 공유락, 배타락이란?
+- 공유락 : 읽기만
+- 배타락 : 읽기+쓰기
+- 공유락이 걸려있을때 배타락이 허용가능한가요?
+	- 공유락 일때 공유락은 가능. 배타락 불가능
+	- 배타락일땐, 공유락 불가능. 배타락 불가능.
+
 > :arrow_double_up:[Top](#4-Database) :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#4-Database) :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ## 색인이란? 색인을 사용했을때 장단점?
@@ -182,13 +193,13 @@
 
 - 특징
 	- 논리적/물리적으로 테이블과 독립적이다
-- 장점 : 검색시 빠르게 탐색
-- 단점 : 새로운 값 추가,삭제, 수정시 쿼리문 속도 느려진다
-
+- 장점 : 검색 시 빠르게 탐색
+- 단점 : 새로운 값 추가, 삭제, 수정시 쿼리문 속도 느려진다(인덱스를 수정해야하기때문)
 
 >[참고](https://lalwr.blogspot.com/2016/02/db-index.html)
 
 > :arrow_double_up:[Top](#4-Database) :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#4-Database) :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-## 역정규화를 하는 이유는 무엇인가?
+## 역정규화를 하는 이유는 무엇인가? (★★★)
+- <https://scidb.tistory.com/entry/%EC%97%AD%EC%A0%95%EA%B7%9C%ED%99%94-%EB%AC%B4%EC%97%87%EC%9D%B4-%EB%AC%B8%EC%A0%9C%EC%9D%B8%EA%B0%80>
 > :arrow_double_up:[Top](#4-Database) :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#4-Database) :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)

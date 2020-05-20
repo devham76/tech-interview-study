@@ -840,16 +840,26 @@ public class InstanceMemberEx03 {
 ## 자바에서 tcp udp 소켓 생성 방법
 
 
+
 > :arrow_double_up:[Top](#7-Java)
 :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-Java)
 :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
-## 리틀엔디안 빅엔디안
+## 리틀엔디안 빅엔디안(★)
 
 - Little Endian
 	- 메모리의 첫 주소에 하위 데이터(데이터의 맨 오른쪽)부터 저장
+  - 연산이 적다
+  - 인텔이 리틀엔디안을 사용한다
 - Big Endian
 	- 메모리의 첫 주소에 상위 데이터(데이터의 맨 왼쪽)부터 저장
+  - 사람이 읽는 방법
+  - 디버그는 빅엔디안이 편하다
+  - 서버쪽에서 많이 사용하는것 IBM
+
+  - IBM, 인텔 함께 사용할때 오류가 발생할수있다
+
+- endian : 메모리에 연속된 대상을 배열하는 방법
 
 >[참고](https://duzi077.tistory.com/201)
 > :arrow_double_up:[Top](#7-Java)
@@ -858,12 +868,15 @@ public class InstanceMemberEx03 {
 
 
 ## Reflection
+
 - Reflection : 반사, 투영하다
 - 정의 : 객체를 통해 클래스의 정보를 분석해 내는 프로그램 기법
 
 - 리플렉션은 __compiler를 무시한 채__ runtime 상황에서 __memory에 올라간 class,method등의 정의를 동적으로 찾아 조적할 수 있는 행위__
 - 즉, 동적인 언어가 가진 특징
 - 프레임워크에서 유연성있는 동작을 위해 자주 사용된다
+<br>
+- 자바 API, getClass ; 코드 작성시점에서 클래스나 메소드가 뭔지 모를때 사용한다.
 
 > :arrow_double_up:[Top](#7-Java)
 :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-Java)

@@ -490,7 +490,7 @@ public static void main(String[] args) {
 - 최대힙(부모노드>자식노드) / 최소힙(부모노드<자식노드)
 - 최댓값, 최솟값을 쉽게 추출할 수 있는 자료구조
 
- **삭제**
+ **삭제**	logN
  - __루트만 삭제 가능 , 삭제후 마지막 노드를 루트로 두고 우선순위비교__
 
  1. 루트노드를 삭제
@@ -500,7 +500,7 @@ public static void main(String[] args) {
 
 ![힙 삭제](https://user-images.githubusercontent.com/55946791/81799451-525b7500-954c-11ea-93a0-fa92dab7657e.JPG)
 
-**삽입** 마지막 노드에 삽입
+**삽입** 마지막 노드에 삽입 logN
 ![힙 삽입](https://user-images.githubusercontent.com/55946791/81799454-538ca200-954c-11ea-9190-7883f0f5f8cc.JPG)
 
 
@@ -515,6 +515,7 @@ public static void main(String[] args) {
 > :arrow_double_up:[Top](#6-algorithm)
 :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)
 :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
 
 ## 이진트리, 이진 검색트리, 힙이 각각 무엇인지 설명해주세요
 
@@ -594,6 +595,8 @@ public static void main(String[] args) {
 - 해시테이블이 이진검색트리보다 빠르다
 - 하지만, 정렬이 되지않아 정렬을 위한 메모리를 추가로 필요하다
 - 따라서 이진검색트리가 해시테이블 보다는 느리지만 O(logN) 의 속도도 충분히 빠르기 때문에 메모리가 제한된 모바일 기기에서는 더 적절하다.
+- 해시트리 ; 해시테이블때문에, 메모리가 추가로 필요할수있다.
+- 해시트리 ; 충돌이 많이 일어나면 , 성능이 낮아진다
 
 > :arrow_double_up:[Top](#6-algorithm)
 :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm)
@@ -605,5 +608,6 @@ public static void main(String[] args) {
 - 삽입 삭제가 자주 일어나면 LinkedList를 사용하는것이 좋다.
 
 - 이유 : ArrayList는 내부적으로 데이터를 배열에서 관리하며 데이터의 추가, 삭제를 위해 아래와 같이 __임시 배열을 생성해 데이터를 복사 하는 방법을__ 사용 하고 있기 때문에 삽입 삭제시 많은 복사가 일어나기 때문.
+
 
 > :arrow_double_up:[Top](#6-algorithm) :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#6-algorithm) :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
