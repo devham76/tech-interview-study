@@ -252,12 +252,15 @@ public static void main(String[] args) {
 - node와 edge로 구성
 - 트리에는 cycle이 존재x
 <br>
-- 트리의 구성
+
+**트리의 구성**
+
 ```
 1. 하나의 루트 노드를 갖는다
 2. 루트 노드는 0개 이상의 자식 노드를 갖는다.
 3. 그 자식의 노드 또한 0개 이상의 자식을 갖고 이 구조가 반복된다.
 ```
+
 <br>
 
 - 트리의 종류
@@ -490,7 +493,8 @@ public static void main(String[] args) {
 - 최대힙(부모노드>자식노드) / 최소힙(부모노드<자식노드)
 - 최댓값, 최솟값을 쉽게 추출할 수 있는 자료구조
 
- **삭제**	logN
+ **삭제**
+ - logN
  - __루트만 삭제 가능 , 삭제후 마지막 노드를 루트로 두고 우선순위비교__
 
  1. 루트노드를 삭제
@@ -500,7 +504,8 @@ public static void main(String[] args) {
 
 ![힙 삭제](https://user-images.githubusercontent.com/55946791/81799451-525b7500-954c-11ea-93a0-fa92dab7657e.JPG)
 
-**삽입** 마지막 노드에 삽입 logN
+**삽입**
+- 마지막 노드에 삽입 logN
 ![힙 삽입](https://user-images.githubusercontent.com/55946791/81799454-538ca200-954c-11ea-9190-7883f0f5f8cc.JPG)
 
 
@@ -542,8 +547,9 @@ public static void main(String[] args) {
 **이진트리 vs 이진탐색 트리**
 
 - 이진트리 : 노드의 최대차수가 2인 트리
-<br>
+
 - 이진탐색 : 정렬된 숫자에서 검색시, 한 숫자 선택, 검색 숫자보다 작으면 오른쪽, 크면 왼쪽 검사
+
 - 이진탐색트리 : 이진트리 + 조건  
 	- __조건 : 루트노드 > 왼쪽 자식 노드 && 루트노드 < 오른쪽 자식 노드__
 	- 트리가 이진탐색을 한다
@@ -554,6 +560,7 @@ public static void main(String[] args) {
 - 삽입,삭제,검색 최악 : O(N) / 평균 : O(logN)
 
 **이진탐색 트리**
+
 - 이진탐색트리 검색
 ![이진탐색트리 검색](https://user-images.githubusercontent.com/55946791/81798464-0b20b480-954b-11ea-9741-5e49fe464b29.png)
 
@@ -572,10 +579,10 @@ public static void main(String[] args) {
 
 > [참고](https://zeddios.tistory.com/492)
 
-- 자식 하나일떄
+- 자식 하나일때
 ![이진탐색트리 삭제-자식하나](https://user-images.githubusercontent.com/55946791/81800767-512b4780-954e-11ea-90dd-347264164e1d.JPG)
 
-- 자식 두개일떄
+- 자식 두개일때
 ![이진탐색트리 삭제](https://user-images.githubusercontent.com/55946791/81798461-09ef8780-954b-11ea-9c54-d05f897b91cb.png)
 
 > [참고](https://galid1.tistory.com/176?category=746456)
