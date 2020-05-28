@@ -108,6 +108,21 @@ while ((sourceLine = br.readLine()) != null) {
 |안정성 , 확장성, 호환성 | 성능 (대량접속에도 적은 리소스 사용, 빠르다)|
 |요청이 많을수록 cpu,메모리 사용증가로 인한 <br>성능저하|적은 수의 쓰레드로 효율적인 일 처리, 문맥교환 비용적다<br>cpu 소모 적다 |
 
+NGINX
+- 트래픽이 많은 웹사이트를 위해 네트워크 확장성을 주목적으로 설계한 경량 http서버
+- 아파치 웹 서버를 대체할 대안으로 급부상 중
+- 비동기 이벤트 기반 구조 (아파치는 스레드/프로세스 기반)
+- 다수의 연결을 효과적으로 처리
+- 대부분의 코어 모듈이 Apache보다 적은 리소스로 더 빠르게 동작
+- 사용하는 곳
+	- FaceBook, NetFlis, WordPress, GitHub 등
+	- 네이버 첫페이지, 카카오톡 공지사항 서버 등
+
+아파치 웹 서버
+- 스레드/프로세스 기반 구조
+- client의 요청이 들어오면 스레드를 생성
+- 사용자가 많으면, 많은 스레드 생성
+	- 메모리 및 CPU 낭비, Context-Swithcing Overhead발생
 
 ## Docker
 1. 원하는 개발 환경을 도커파일에 저장하면, 도커는 원하는 어떤 머신에든 해당 환경을 제공
@@ -152,8 +167,12 @@ while ((sourceLine = br.readLine()) != null) {
 	- 해결을 위한 노력
 		- image spriting : 웹 구성 이미지 파일 요청수를 줄이기 위해 아이콘을 하나의 큰 이미지로 만듬
 		- domain sharding : 다수의 connection 을 생성, 병렬로 요청 보내기도한다 / 하지만 도메인별 커넥션 개수 제한
-		- SPDY : HTTP를 통해 전송을 재 정의하는 형태
+		- __SPDY__ : HTTP를 통해 전송을 재 정의하는 형태
 		![spdy](https://user-images.githubusercontent.com/55946791/82141687-88616780-9872-11ea-87d7-8611e1799ce8.png)
+				- Multiplexing : 하나의 커넥션 안에서 다수의 독립적인 스트림을 동시에 처리
+				- Server Push : 클라이언트 요청 없이 서버에서 콘텐츠를 직접 push가능
+				- HTTP헤더 압축
+		> [SPDY 참고](https://www.slideshare.net/oddpoet/spdy-13231459)
 
 	**HTTP2**
 

@@ -144,6 +144,19 @@
 - 종류 : MongoDB, HBASE, Cassandra등
 >[참고](https://kimsangyeon.github.io/sql/nosql/database/2019/08/16/rdbms-nosql.html)
 
+**Redis**
+- Remote DIctionary System
+- 메모리 기반의 Key/Value Store
+- 빠른처리 (read/write) 속도와 검증괸 s/w 안정성 제공
+- 다양한 데이터 구조 저장
+	- string, hash, lists, sets, sorted set, bitmap등
+- 사용하는곳
+	- 인스타그램, 트위터 등
+
+**HBase**
+- 기존의 Redis NoSQL의 한계
+	- 많은 Memory 공간을 필요, 분산 저장 시스템이 아님
+
 
 ## 트랜잭션이란?(+트랜잭션의 성질)
 
