@@ -1,3 +1,5 @@
+
+
 로드밸런싱
 - 적용 알고리즘
 https://post.naver.com/viewer/postView.nhn?volumeNo=27046347&memberNo=2521903
@@ -17,8 +19,7 @@ https://d2.naver.com/helloworld/6070967
 https://www.devkwon.com/posts/category/%EB%B6%84%EC%82%B0%EC%84%9C%EB%B2%84%EC%B2%98%EB%A6%AC
 https://kkwonsy.tistory.com/66
 
-db 엔진
-https://skibis.tistory.com/18
+
 
 
 면접 준비
