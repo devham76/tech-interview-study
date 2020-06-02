@@ -14,7 +14,7 @@
 * [색인이란? 색인을 사용했을때 장단점?](#색인이란?-색인을-사용했을때-장단점?)
 * [역정규화를 하는 이유는 무엇인가?](#역정규화를-하는-이유는-무엇인가?)
 
-
+* MySQL을 사용하셨다면, 어떤 엔진을 사용했나요? 왜 사용했나요?
 
 ---
 ## Primary Key, Foreign Key, ER 모델
@@ -211,8 +211,37 @@
 
 >[참고](https://lalwr.blogspot.com/2016/02/db-index.html)
 
+>[인덱스란? Clustered Index/ Non-Clustered Index란?](https://s1107.tistory.com/38?category=242156)
+
 > :arrow_double_up:[Top](#4-Database) :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#4-Database) :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
 ## 역정규화를 하는 이유는 무엇인가? (★★★)
 - <https://scidb.tistory.com/entry/%EC%97%AD%EC%A0%95%EA%B7%9C%ED%99%94-%EB%AC%B4%EC%97%87%EC%9D%B4-%EB%AC%B8%EC%A0%9C%EC%9D%B8%EA%B0%80>
 > :arrow_double_up:[Top](#4-Database) :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#4-Database) :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
+
+## MySQL을 사용하셨다면, 어떤 엔진을 사용했나요? 왜 사용했나요?
+| 스토리 엔진 | 엑세스 패턴 |
+|--|--|
+|MyISAM | 추가 처리만 한다, select count(*) 를 많이 사용|
+|InnoDB| 갱신 빈도가 높다, 트랜잭션이 필요하다, 민감한 정보를 사용한다|
+
+
+### 1. MyISAM
+- MySQL 5.5 이전까지 기본 스토리지 엔진
+- __Table-level Lock__
+	- 테이블 작업시 특정 행을 수정하려고 하면 테이블 전체에 락이 걸린다
+- 트랜잭션 미지원
+	- 작업도중 문제가 발생해도, 이미 db안으로 데이터가 입력됨
+- __select작업이 많은 경우 효과적__
+	- 잦은 변경 및 삭제에는 성능이 좋지 못함.
+
+### 2. InnoDB
+- MySQL 5.5 부터 기본 스토리지 엔진
+- 트랜잭션 지원 (ACID Transaction)
+- MyISAM 보다 data 저장 비율이 낮고, 데이터 로드 속도 느리다.
+- __Row-level Lock__
+	- 테이블작업시, 작업 시작하면 해당 row만 잠긴다.
+	- insert, update, delete에 대한 속도가 빠르다
+- 민감한 정보를 갖는 table(회원 table, 돈 관련 table)에 사용하기 좋다
+	- 비정상 종료시 복구 기능
+- 주로 데이터 입력 및 수정이 빈번한 높은 퍼포먼스를 요구하는 대용량 사이트에 적합

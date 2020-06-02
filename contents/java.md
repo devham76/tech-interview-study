@@ -104,8 +104,38 @@ __String Pool이라는 공간안에 메모리를 할당 받아 새로운 String 
 - 동기화 X
 - 싱글 쓰레드 환경에서 StringBuffer에 비해 연산처리가 빠르다.
 
-
 > <https://jeong-pro.tistory.com/85>
+
+---
+# String vs StringBuilder
+
+## String
+- String 클래스는 불변
+- 문자열은 한 번 생성 되면, 메모리 내부에서 변경 불가능
+- __연산 과정__ : 메모리 내에서 이전과 다른 __새로운 문자열이 새롭게__ 만들어진다 (string pool에)
+- 연산 후 기존의 문자열 객체는 더이상 참조되지 않기 때문에 GC의 대상이 된다
+- 따라서, 연산이 여러번 반복 실행되면, 메모리 낭비와 불필요한 액션이 발생하게 된다
+- + , concat() / 그중에서도 +는 속도가 훨씬 느리다
+![string1](https://user-images.githubusercontent.com/55946791/83489455-5fcfa380-a4e9-11ea-9df0-6da9aa9de163.png)
+![String_Perf_Chart_28](https://user-images.githubusercontent.com/55946791/83489629-aae9b680-a4e9-11ea-821a-ed0e211dcbba.png)
+
+
+## StringBuilder
+- 이 클래스는 가변적
+- __연산 과정__ : 새로운 문자열 만들지X, __기조의 문자열에 추가,수정 될 뿐이다.__
+- append()
+
+**내부 작동**
+- 가변 길이의 배열과 같이 작동
+- StringBuilder 객체가 생성되면, 일정크기(16)를 갖는 빈 문자열 객체가 생성된다
+- 여기에 사용자가 문자열을 대입하면 미리 준비된 배열 공간에 문자열이 들어간다
+
+
+![stringbuilder1](https://user-images.githubusercontent.com/55946791/83489448-5f370d00-a4e9-11ea-9370-9f5274018fd4.png)
+
+
+> [StringBuilder 클래스에 대해서 알기!](https://m.blog.naver.com/itinstructor/100203105622)
+
 
 > :arrow_double_up:[Top](#7-java)    :leftwards_arrow_with_hook:[Back](https://github.com/devham76/tech-interview-studyw#7-java)    :information_source:[Home](https://github.com/devham76/tech-intervie-studyw#tech-interview)
 
@@ -769,6 +799,8 @@ try{
 ```
 
 **JAVA 8 부터 지원되는것들**
+> 곧 지원 서비스 만료된다. 11을 사용하는것을 권장한다
+오라클 자바 SE8 무료 지원 종료…"보안 우려
 
 1. Lambda Expressions
 
@@ -803,6 +835,10 @@ stream1.forEach(e -> System.out.print(e + " "));
 5. Permanent Heap 영역이(메모리 크기 고정) 제거되었다
 - 대신 Native memory 영역에 Meataspace영역이 추가(OS가 자동 조정)
 - 따라서 OutOfMemoryError를 보기 힘들다
+
+**JAVA11**
+- 새로운 gc
+[java11](https://futurecreator.github.io/2018/09/29/java-11-released/)
 
 ## this 키워드
 
