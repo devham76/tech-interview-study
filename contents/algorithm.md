@@ -359,7 +359,6 @@ public static void main(String[] args) {
 
 ## 벨만포드 알고리즘과 다익스트라 알고리즘의 차이점?
 
-
 다익스트라 - 우선순위큐
 벨만코드 - 구현어떻게하는지
 
@@ -399,9 +398,14 @@ public static void main(String[] args) {
 
 ## MST 알고리즘(Spanning Tree란?)
 
+```
+※) 다익스트라 알고리즘
+"그래프"에서 출발점에서 목표점까지의
+최단거리를 구할 때 사용하는 알고리즘
+```
+
 - 언제 사용하나요 ?
 	- 통신구축
-
 
 **Spanning Tree**
 - 그래프 내의 모든 정점을 포함하고 일부 간선을 선택해서 만든 트리
@@ -447,11 +451,6 @@ public static void main(String[] args) {
 - 시간복잡도 :
 
 - 구현 코드 ?
-
-## Floyd-Warshall 알고리즘
-- 모든 정점에서 모든 정점으로 최단 경로
-- 거쳐가는 정점을 기준으로 최단 거리를 구한다
-	- 다익스트라 - 가장 적은 비용을 하나씩 선택
 
 
 ## Floyd-Warshall 알고리즘

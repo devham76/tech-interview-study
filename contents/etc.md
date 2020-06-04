@@ -180,10 +180,9 @@ while ((sourceLine = br.readLine()) != null) {
 		![http2](https://user-images.githubusercontent.com/55946791/82141520-53a0e080-9871-11ea-86c3-ff63fec1f3ce.png)
 		- 동시에 여러개의 메세지를 동시에 주고 받을 수 있음
 		- 응답은 순서 x
-		- 단일 TCP 연결을 통해 여러 데이터 요청을 병렬로 보낼 수 있다. (웹 사이트를 빠르게 로드 할수있다)
+		- __단일 TCP 연결을 통해 여러 데이터 요청을 병렬로__ 보낼 수 있다. (웹 사이트를 빠르게 로드 할수있다)
 	- 요청 헤더 압축
 
-
-	> [https://ijbgo.tistory.com/26]
+> <https://ijbgo.tistory.com/26>
 
 > [HTTP3](https://evan-moon.github.io/2019/10/08/what-is-http3/)

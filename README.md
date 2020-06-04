@@ -2,6 +2,10 @@
 
 **기술 면접 대비를 위한 기본 개념을 정리하는 Repository 입니다.**
 
+> 자세한 내용은 contents 폴더에서 확인 가능하며
+모든 문제에 대한 정리 & 짧은 답변은 [이곳](https://docs.google.com/spreadsheets/d/1gi9yQ_wlg2utcs15mkkktFG-0xgycFhgZvOb9KIqHH0/edit?usp=sharing)에서 확인 가능합니다.
+
+
 <div align=center>
 
 [![author](https://img.shields.io/badge/author-devham76-blue.svg)](https://github.com/devham76)

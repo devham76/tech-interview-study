@@ -259,7 +259,7 @@ ex) 키보드라는 모양을 가졌지만, 문서를 작성하고 게임을 한
 ![helloworld-1329-1](https://user-images.githubusercontent.com/55946791/81578490-d6471d00-93e5-11ea-9987-8b56a33d7817.png)
 
 <br><br>
-위의 Permanenet Generation 영역은 Method 영역에 포함된 부분이고.. Java 8부터 MetaSpace 영역으로 바뀌었다고 한다. 위 그림과 동일하게 적용되는지는 모르겠다. (PermGen 영역에서 일어나는 GC도 Major GC에 포함된다.)
+위의 Permanenet Generation 영역은 Method 영역에 포함된 부분이고.. Java 8부터 MetaSpace 영역으로 바뀌었다고 한다(PermGen 영역에서 일어나는 GC도 Major GC에 포함된다.)
 <br><br>
 
 **Young 영역**
@@ -349,9 +349,13 @@ Major GC는 아래와 같은 방식에 따라 동작한다. GC 방식에 따라 
 - method, heap : 모든 쓰레드가 공유
 - stack, pc레지스터, native method stack : 각각의 쓰레드마다 생성, 공유x
 
+
+![jvm 메모리](https://user-images.githubusercontent.com/55946791/83709315-359cf380-a659-11ea-8c16-dfa474482873.png)
+
+
 > [참고1](https://hoonmaro.tistory.com/19)
 > [참고2](https://jeong-pro.tistory.com/148)
-
+> [참고3](https://steady-snail.tistory.com/67)
 
 ## equals,==
 

@@ -6,7 +6,7 @@
  * 흐름(웹브라우저에서 Spring MVC로 요청했을 떄)
  * Bean 객체란?
  * 스프링 디스패처 서블릿이란
- * MVC1과 MVC2 패턴의 차이ㄴ
+ * MVC1과 MVC2 패턴의 차이
  * Bean 생성 원리
  * Spring에서 AOP를 구현하는 3가지 방법.
  * Spring을 쓰는 이유
