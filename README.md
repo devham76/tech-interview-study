@@ -96,11 +96,7 @@
 
 * MySQL을 사용하셨다면, 어떤 엔진을 사용했나요? 왜 사용했나요?
 
-
-## 5. Design Pattern
-:arrow_forward: [답변 내용](/contents/designpattern.md)
-
-## 6. Algorithm
+## 5. Algorithm
 ### :pushpin: [알고리즘 ps](https://github.com/devham76/AlgorithmPS)
 :arrow_forward: [답변 내용](/contents/algorithm.md)
 
@@ -132,7 +128,7 @@
 * 해쉬 테이블/큐/스택을 구현해주세요
 * 트리/링크드리스트 구현해주세요
 
-## 7. Java
+## 6. Java
 :arrow_forward: [답변 내용](/contents/java.md)
 
 * 자바 컴파일 과정을 설명하라
@@ -164,7 +160,7 @@
 * Reflection
 * oop 5대 원칙
 
-## 8. Spring
+## 7. Spring
 :arrow_forward: [답변 내용](/contents/spring.md)
 * IOC 란?
 * DI 란?
@@ -181,7 +177,7 @@
 * 스프링 버전 몇 사용하셨나요? (버전별 차이)
 * 스프링 security 사용해봤나요?
 
-## 9. Software Engineering
+## 8. Software Engineering
 :arrow_forward: [답변 내용](/contents/software-engineering.md)
 * sw공학이란? 필요한 이유? 좋은 설계란?
 * 형상관리란?
@@ -204,7 +200,7 @@
 * Java에서 팩토리 메서드 패턴을 사용하는 이유는?
 
 
-## 10. ETC
+## 9. ETC
 :arrow_forward: [답변 내용](/contents/etc.md)
 
 * sass lass pass
@@ -215,7 +211,7 @@
 * HTTP와 HTTP2의 차이 + HTTP3
 * apache와 nginx차이
 
-## 11. 기술 외의 질문
+## 10. 기술 외의 질문
 * 어떤 역할을 맡았고, 무슨 기술을 썼으며, 어떤 어려움이 있었고 어떻게 해결했는지
 * 작성한 프로젝트의 보안은 어떻게 신경썼나요?
 * 코딩테스트문제에서 뭐가 인상깊거나 아쉬웠는지 간단히
